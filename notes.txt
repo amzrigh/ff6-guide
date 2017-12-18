@@ -1,0 +1,1252 @@
+var bosses = {
+	"Air Force" : {
+		"stats" : {
+			"hp" : 8000,
+			"mp" : 750,
+			"atk" : 10,
+			"def" : 150,
+			"eva" : 0,
+			"matk" : 12,
+			"mdef" : 120,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Lightning",
+				"Water"
+			],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"Three parts: Air Force, Laser Gun, Missile Bay",
+			"Steal Debilitator from Missile Bay",
+			"Killing Laser Gun spawns Speck, which uses Runic",
+			"Summon Zoneseek for Shell, Kirin to counter Sap",
+		],
+		"wanted" : [
+			"Zoneseek",
+			"Kirin"
+		]
+	},
+	"Atma" : {
+		"stats" : {
+			"hp" : 55000,
+			"mp" : 19000,
+			"atk" : 20,
+			"def" : 75,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 70,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [
+				"Blind",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Poison",
+				"Wind",
+				"Pearl",
+				"Earth",
+				"Water"
+			]
+		},
+		"notes" : [
+			"To conserve resources, consider beginning fight reflected and letting him damage himself with spells; hasten this process with Debilitator",
+			"Fight defensively, buff yourself up",
+			"Below 32,640 HP, every 12 times he is damaged, will charge for two turns, then cast Ultima",
+			"Runic negates Ultima",
+			"Steal Crystal Orb, Drainer"
+		],
+		"wanted" : [
+			"Celes",
+			"Carbunkl"
+		]
+	},
+	"AtmaWeapon" : {
+		"stats" : {
+			"hp" : 24000,
+			"mp" : 5000,
+			"atk" : 45,
+			"def" : 142,
+			"eva" : 20,
+			"matk" : 5,
+			"mdef" : 97,
+			"meva" : 10,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [
+				"Blind",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"Steal Ribbon",
+			"Drain MP to hamstring him (slower/easier)",
+			"Reflect to deal with Flare",
+			"Zoneseek for Shell"
+		],
+		"wanted" : [
+			"Locke",
+			"Unicorn (deal with Mind Blast)",
+			"Zoneseek"
+		]
+	},
+	"Blue Drgn" : {
+		"stats" : {
+			"hp" : 26900,
+			"mp" : 3800,
+			"atk" : 13,
+			"def" : 110,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Lightning"
+			],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Water"
+			]
+		},
+		"notes" : [
+			"Wear anti-Water gear (Imp equipment, Thunder Shield, Minerva, Snow Muffler)",
+			"Do not use Haste&mdash;will cast Rippler to steal from you",
+			"Gau's Aspik rage is very effective&mdash;absorbs water and deals lightning damage",
+			"&#x215b; chance of Metamorph success"
+		],
+		"wanted" : [
+			"Ragnarok maybe?"
+		]
+	},
+	"Chadarnook (Goddess)" : {
+		"stats" : {
+			"hp" : 30000,
+			"mp" : 7600,
+			"atk" : 18,
+			"def" : 135,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 130,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Pearl"
+			],
+			"vuln" : [
+				"Blind",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Lightning"
+			]
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"Chadarnook (Phantasm)" : {
+		"stats" : {
+			"hp" : 56000,
+			"mp" : 6400,
+			"atk" : 13,
+			"def" : 140,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire"
+			],
+			"vuln" : [
+				"Blind",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Pearl",
+				"Water"
+			]
+		},
+		"notes" : [
+			"Ignore Goddess, fight Phantasm"
+		],
+		"wanted" : []
+	},
+	"Chupon" : {
+		"stats" : {
+			"hp" : 10000,
+			"mp" : 40000,
+			"atk" : 13,
+			"def" : 100,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 55,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Ice",
+				"Water"
+			],
+			"vuln" : [
+				"Blind",
+				"Mute",
+				"Berserk",
+				"Sleep",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Fire"
+			]
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"Crane (Left)" : {
+		"stats" : {
+			"hp" : 1800,
+			"mp" : 447,
+			"atk" : 14,
+			"def" : 145,
+			"eva" : 0,
+			"matk" : 4,
+			"mdef" : 120,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Water"
+			],
+			"vuln" : [
+				"Mute",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Lightning"
+			]
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"Crane (Right)" : {
+		"stats" : {
+			"hp" : 2300,
+			"mp" : 447,
+			"atk" : 14,
+			"def" : 125,
+			"eva" : 0,
+			"matk" : 4,
+			"mdef" : 120,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Lightning",
+				"Water"
+			],
+			"vuln" : [
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Fire"
+			]
+		},
+		"notes" : [
+			"Steal Debilitator from Right",
+			"Rage Anguiform"
+		],
+		"wanted" : [
+			"Gau (Anguiform)"
+		]
+	},
+	"Curley" : {
+		"stats" : {
+			"hp" : 15000,
+			"mp" : 2000,
+			"atk" : 1,
+			"def" : 100,
+			"eva" : 0,
+			"matk" : 4,
+			"mdef" : 110,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Ice",
+				"Water"
+			],
+			"vuln" : [
+				"Blind",
+				"Sleep"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Fire"
+			]
+		},
+		"notes" : [
+			"Kill first"
+		],
+		"wanted" : []
+	},
+	"Dadaluma" : {
+		"stats" : {
+			"hp" : 3270,
+			"mp" : 1005,
+			"atk" : 12,
+			"def" : 85,
+			"eva" : 0,
+			"matk" : 3,
+			"mdef" : 143,
+			"meva" : 10,
+		},
+		"affin" : {
+			"weak" : [
+				"Poison"
+			],
+			"vuln" : [
+				"Blind",
+				"Imp",
+				"Stone",
+				"Death",
+				"Mute",
+				"Sleep",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"Steal Sneak Ring",
+			"Rage Areneid/Primordite for Stop",
+			"Use Imp; Invis yourself"
+		],
+		"wanted" : [
+			"Locke",
+			"Gau (Araneid/Primordite)",
+			"Celes (Imp)"
+		]
+	},
+	"Dirt Drgn" : {
+		"stats" : {
+			"hp" : 28500,
+			"mp" : 16500,
+			"atk" : 23,
+			"def" : 110,
+			"eva" : 0,
+			"matk" : 12,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Wind",
+				"Water"
+			],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Sleep",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"Will nullify Float status if non-permanent&mdash;equip Cherub Down",
+			"Strong physical attacks",
+			"&#x215b; chance of Metamorph success"
+		],
+		"wanted" : [
+			"Ragnarok maybe?"
+		]
+	},
+	"Doom" : {
+		"stats" : {
+			"hp" : 63000,
+			"mp" : 4800,
+			"atk" : 60,
+			"def" : 110,
+			"eva" : 0,
+			"matk" : 9,
+			"mdef" : 160,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Pearl"
+			],
+			"vuln" : [
+				"Blind",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Ice",
+				"Poison"
+			]
+		},
+		"notes" : [
+			"Gear against Ice",
+			"Set Slow early",
+			"Dispel after \"Doom's aura is shaking!\"",
+			"Use heavy non-elemental attacks",
+			"Try to get gil ending in 1 so L? Pearl will always hit"
+		],
+		"wanted" : [
+			"Strago (learn ForceField)"
+		]
+	},
+	"Doom Gaze" : {
+		"stats" : {
+			"hp" : 55555,
+			"mp" : 38000,
+			"atk" : 35,
+			"def" : 150,
+			"eva" : 30,
+			"matk" : 8,
+			"mdef" : 170,
+			"meva" : 30,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Pearl"
+			],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : [
+				"Ice",
+				"Poison"
+			]
+		},
+		"notes" : [
+			"Vanish + nonstandard kills will reset fight (X-Zone, Atom/True Edge, Cleave, Snare)",
+			"Protect against insta-death",
+			"Try to avoid L5 Doom vulnerability",
+			"Rage Io or Powerdemon"
+		],
+		"wanted" : [
+			"Gau (Io/Powerdemon)"
+		]
+	},
+	"Dullahan" : {
+		"stats" : {
+			"hp" : 32450,
+			"mp" : 1721,
+			"atk" : 55,
+			"def" : 130,
+			"eva" : 10,
+			"matk" : 7,
+			"mdef" : 160,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire"
+			],
+			"vuln" : [
+				"Blind",
+				"Mute",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Ice"
+			]
+		},
+		"notes" : [
+			"Rasp to death"
+		],
+		"wanted" : []
+	},
+	"Face" : {
+		"stats" : {
+			"hp" : 30000,
+			"mp" : 10000,
+			"atk" : 63,
+			"def" : 140,
+			"eva" : 10,
+			"matk" : 12,
+			"mdef" : 140,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire"
+			],
+			"vuln" : [
+				"Blind",
+				"Death"
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"Long Arm > Face > Short Arm"
+		],
+		"wanted" : []
+	},
+	"Flame Eater" : {
+		"stats" : {
+			"hp" : 8400,
+			"mp" : 480,
+			"atk" : 13,
+			"def" : 105,
+			"eva" : 20,
+			"matk" : 7,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Ice"
+			],
+			"vuln" : [
+				"Slow"
+			],
+			"resist" : [
+				"Lightning",
+				"Poison",
+				"Pearl",
+				"Earth"
+			],
+			"absorb" : [
+				"Fire"
+			]
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"GhostTrain" : {
+		"stats" : {
+			"hp" : 1900,
+			"mp" : 350,
+			"atk" : 10,
+			"def" : 30,
+			"eva" : 0,
+			"matk" : 5,
+			"mdef" : 210,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Lightning",
+				"Pearl"
+			],
+			"vuln" : [
+				"Undead"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Poison"
+			]
+		},
+		"notes" : [
+			"Revivify/Phoenix Down"
+		],
+		"wanted" : []
+	},
+	"Gigantos" : {
+		"stats" : {
+			"hp" : 6000,
+			"mp" : 1120,
+			"atk" : 20,
+			"def" : 1,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 1,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Poison"
+			],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Imp",
+				"Stone",
+				"Death",
+				"Mute",
+				"Berserk",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"100% physical attacks; make everybody invisible"
+		],
+		"wanted" : []
+	},
+	"Girl" : {
+		"stats" : {
+			"hp" : 9999,
+			"mp" : 10000,
+			"atk" : 73,
+			"def" : 150,
+			"eva" : 0,
+			"matk" : 9,
+			"mdef" : 155,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : [
+				"Fire",
+				"Ice",
+				"Lightning",
+				"Poison",
+				"Wind",
+				"Pearl",
+				"Earth",
+				"Water"
+			]
+		},
+		"notes" : [
+			"Steal Ragnarok"
+		],
+		"wanted" : []
+	},
+	"Goddess" : {
+		"stats" : {
+			"hp" : 44000,
+			"mp" : 19000,
+			"atk" : 13,
+			"def" : 85,
+			"eva" : 0,
+			"matk" : 14,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"Thunder Shields, Safety Bits",
+			"Regular attacks &#x2153; countered with Love Token, which causes afflicted character to True Knight her",
+			"Steal Minerva"
+		],
+		"wanted" : []
+	},
+	"Gold Drgn" : {
+		"stats" : {
+			"hp" : 32400,
+			"mp" : 4000,
+			"atk" : 13,
+			"def" : 110,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Water"
+			],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Berserk"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Lightning"
+			]
+		},
+		"notes" : [
+			"Gear up anti-Lightning",
+			"&#x215b; chance of Metamorph success"
+		],
+		"wanted" : []
+	},
+	"Guardian" : {
+		"stats" : {
+			"hp" : 60000,
+			"mp" : 5200,
+			"atk" : 13,
+			"def" : 150,
+			"eva" : 0,
+			"matk" : 25,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Lightning"
+			],
+			"vuln" : [
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Water"
+			]
+		},
+		"notes" : [
+			"Slow & Haste, beat him quickly"
+			"Steal Ribbon, Force Armor"
+		],
+		"wanted" : []
+	},
+	"Hidon" : {
+		"stats" : {
+			"hp" : 25000,
+			"mp" : 12500,
+			"atk" : 13,
+			"def" : 110,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 160,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Pearl",
+				"Earth"
+			],
+			"vuln" : [
+				"Undead",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Poison"
+			]
+		},
+		"notes" : [
+			"Kill Hidonites first so Hidon will use GrandTrain",
+			"Steal Thornlet"
+		],
+		"wanted" : [
+			"Strago"
+		]
+	},
+	"Hidonite (1)" : {
+		"stats" : {
+			"hp" : 3500,
+			"mp" : 1000,
+			"atk" : 13,
+			"def" : 85,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Earth"
+			],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Stone",
+				"Death",
+				"Mute",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Poison"
+			]
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"Hidonite (2)" : {
+		"stats" : {
+			"hp" : 3500,
+			"mp" : 1000,
+			"atk" : 13,
+			"def" : 115,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 120,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Stone",
+				"Berserk"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Fire",
+				"Ice",
+				"Lightning",
+				"Poison",
+				"Wind",
+				"Pearl",
+				"Water"
+			]
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"Hidonite (3)" : {
+		"stats" : {
+			"hp" : 3500,
+			"mp" : 1000,
+			"atk" : 13,
+			"def" : 105,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 130,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Pearl"
+			],
+			"vuln" : [
+				"Undead",
+				"Muddle",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Poison"
+			]
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"Hidonite (4)" : {
+		"stats" : {
+			"hp" : 3500,
+			"mp" : 100,
+			"atk" : 13,
+			"def" : 95,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 140,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Ice",
+				"Lightning",
+				"Poison",
+				"Wind",
+				"Pearl",
+				"Earth",
+				"Water"
+			],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Death",
+				"Mute",
+				"Berserk",
+				"Muddle",
+				"Sleep",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"Hit" : {
+		"stats" : {
+			"hp" : 28000,
+			"mp" : 10000,
+			"atk" : 6,
+			"def" : 115,
+			"eva" : 0,
+			"matk" : 9,
+			"mdef" : 153,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Poison"
+			],
+			"vuln" : [
+				"Berserk",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"Mute Magic",
+			"Slow Hit",
+			"Tools (insta-kills) > Tiger > Magic > Hit"
+		],
+		"wanted" : []
+	},
+	"Ice Dragon" : {
+		"stats" : {
+			"hp" : 24400,
+			"mp" : 9000,
+			"atk" : 13,
+			"def" : 110,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire"
+			],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Death",
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"&#x215b; chance of Metamorph success"
+		],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	},
+	"" : {
+		"stats" : {
+			"hp" : ,
+			"mp" : ,
+			"atk" : ,
+			"def" : ,
+			"eva" : ,
+			"matk" : ,
+			"mdef" : ,
+			"meva" : ,
+		},
+		"affin" : {
+			"weak" : [],
+			"vuln" : [],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [],
+		"wanted" : []
+	}
+};
