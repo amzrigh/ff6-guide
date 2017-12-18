@@ -1,0 +1,566 @@
+<html>
+<head>
+<style>
+.title {
+	page-break-before:always;
+	position:relative;
+	top:10px;
+	}
+.title span {
+	border-style: double solid;
+	font-style: bold;
+	align: center;
+	padding: 5px;
+	}
+table.rage {
+	text-align:center;
+	border-spacing: 0px 3px;
+	}
+table.rage th {
+	border-bottom: solid 2px;
+	}
+table.rage td:nth-child(even) {
+	text-align:left;
+	padding-right: 8px;
+	}
+table.rage td:nth-child(odd):not(:empty) {
+	text-align:right;
+	padding-left: 8px;
+	border-right:solid 1px;
+	}
+table.lore {
+	border-spacing:12px 3px;
+	}
+span.ab {
+	font-weight: bold;
+	}
+span.ref {
+	font-style: italic;
+	}
+.status { //large unicode characters
+	spacing: 2px;
+	}
+.status td {
+	font-size: 24px;
+	width: 32px;
+	height: 32px;
+	max-width: 32px;
+	max-height: 32px;
+	font-family: Segoe UI Symbol;
+	text-align: center;
+	vertical-align: midline;
+	overflow: hidden;
+	}
+.status td span {
+	display: inline-block;
+	vertical-align: baseline;
+	border: 1px solid;
+	}
+</style>
+<script>
+/*
+ Blind
+					⠝	&#x281d;
+					ᛤ	&#x16e4;
+					🕶	&#x1f576;					<<<
+ Death
+					ᱪ	&#x1c6a;						<<<
+ Stone
+					༓	&#xf13;
+					Ⰾ	&#x2c0e;
+					Ⰿ	&#x2c0f;
+					߷	&#x7f7;
+					ꔁ	&#xa501;
+						&#x1f94c;	curling stone
+						&#x1242c;	cuneiform one sharu
+					🀙	&#x1f019;
+					🗿	&#x1f5ff;											<<< use Segoe UI Image
+ Imp
+					߷	&#x7f7;
+					༕	&#xf15;
+						&#x2369;		greater-than diaeresis
+					Ⰲ	&#x2c02;
+					ꗭ	&#xa5ed;
+					𐰦	&#x10c26;
+					𓅽	&#x1317d;
+					𓆉	&#x13189;
+					🐢	&#x1f422;					<<<
+ Poison
+					ஃ	&#xb83;
+					☠	&#x2620;
+					🕱	&#x1f571;						<<<
+ Sleep
+					ᢆ	&#x1886;
+					𓀿	&#x1303f;
+					𓊭	&#x132ad;
+						&#x1d13d;	musical notation rest
+					💤	&#x1f4a4;					<<<
+ Muddle
+					Ͽ	&#x3ff;
+					💫	&#x1f4ab;					<<<
+ Berserk
+					ʬ	&#x2ac;
+					ಠ	&#xca0;
+					👿	&#x1f47f;
+					👹	&#x1f479;					<<?
+					🗮	&#x1f5ee;
+ Mute
+					ᚒ	&#x1692;
+					᠁	&#x1801;
+					᨞	&#x1a1e;
+					፧	&#x1367;
+						&#x22ef;		midline ellipsis
+						&#x22f1;		diagonal ellipsis
+						&#x22ee;		vertical ellipsis
+						&#x20dd;		combining enclosing circle
+						&#x2687;		white circle two dots
+						&#xe0bc;		white circle three dots small
+						&#xe0c1;		white circle three dots						<<<
+					💬	&#x1f4ac;
+ Condemned
+					ൠ	&#xd60;
+						&#x2364;		jot diaeresis
+						&#x2363;		star diaeresis
+						&#x2696;		scales							<<<
+ Stop
+						&#x20e0;		COMBINING ENCLOSING CIRCLE BACKSLASH
+						&#x2297;		CIRCLED TIMES
+						&#x23F1;		stopwatch
+					⛣	&#x26e3;																			<<<
+					⯃	&#x2bc3;		black octagon
+						&#xe0ca;		black circle white X
+ Slow
+						&#x231b;		hourglass (emoji)
+						&#x231a;		watch (emoji)
+						&#x25d4;		circle, upper-right quadrant black
+						&#x25f4;		circle upper-left quadrant marked
+					🕗	&#x1f557;																				<<<
+					🕸	&#x1f578;
+					
+ Undead
+						&#x2617;		black shogi
+					☣	&#x2623;
+					☠	&#x2620;
+						&#x1f9db;	vampire
+						&#x1f9df;	zombie
+					💀	&#x1f480;									<<<
+ 
+ Fire
+					ව	&#xdc0;
+					⽕	&#x2f55;
+					🔥	&#x1f525;				<<<
+					🜂	&#x1f702;
+ Ice
+					፨	&#x1368;
+					※	&#x203b;
+						&#x2042;		asterism
+					❄	&#x2744;							<<<
+ Lightning
+					দ	&#x9a6;
+						&#x26a1;		high voltage sign (emoji)
+						&#xe289;		thunderstorm
+					𐦮	&#x109ae;
+					𐰥	&#x10c25;
+					𐰩	&#x10c29;
+					🗲	&#x1f5f2;						<<<
+ Earth
+					෴ &#xdf4;
+					ᄿ	&#x113f;
+						&#x23da;		earth ground
+					⛰	&#x26f0;
+					🜃	&#x1f703;
+					🗻	&#x1f5fb;
+ Wind
+					୭	&#xb6d;
+					༄	&#xf04;
+					༆	&#xf06;
+						&#x181D;
+						&#x224b;
+					⾵	&#x2fb5;
+						&#x1230d;	cuneiform sign u u u (apx "<<<")
+					🌀	&#x1f300;	(emoji)
+					🜁	&#x1f701;
+ Water
+					ᢆ	&#x1886;
+					ఋ &#xc0b;
+					ꕀ	&#xa540;
+					𓈗	&#x13217;
+					🌊	&#x1f30a;				<<<
+					🜄	&#x1f704;
+ Poison
+					ஃ	&#xb83;
+					☠	&#x2620;
+					🕱	&#x1f571;					<<<
+ Pearl
+					۝	&#x6dd;
+					○	&#x25cb;
+					◎	&#x25ce;
+						&#x26aa;		medium white circle
+					❍	&#x274d;
+					𑁍	&#x1104d;
+*/
+</script>
+</head>
+<body>
+<p class="title">
+<span>GAU</span>
+</p>
+<h3>A. WORLD OF BALANCE: From Narshe to the Phantom Forest</h3>
+<p>
+There's lots time before your first visit to the Veldt, but you should be
+playing with some very basic information in mind. First: the fewer unecessary
+battles you fight, the easier it will be for you to get the Rages you want
+faster. Fight the monsters you want, and try to avoid groupings of monsters you 
+don't want. Second: running away counts. To see a monster grouping on the 
+Veldt, you only have to walk away alive and save your game; you don't have to
+kill 'em. Third: when the game splits into three scenarios, CHOOSE SABIN'S 
+SCENARIO LAST, to get Rages from the other two scenarios.
+</p><p>
+Now, let's look at the cream of the crop for the first part of the game:
+</p>
+<table class="rage">
+<tr><th colspan="2">Great Rages</th><th colspan="2">Awesome Rages</th><th colspan="2">Gau's Default Rages</th></tr>
+<tr><td>Areneid</td><td>Numb</td><td>Marshal</td><td>Wind Slash</td><td>Lobo</td><td>Tusk</td></tr>
+<tr><td>Rhodox</td><td>Snare</td><td>Pterodon</td><td>Fire Ball</td><td>Were-Rat</td><td>Poison</td></tr>
+<tr><td>Cirpius</td><td>Haste 2</td><td>Dark Side</td><td>Ice 2</td><td>M-TekArmor</td><td>Tek Laser</td></tr>
+<tr><td>Trilium</td><td>Bio</td><td>Stray Cat</td><td>Catscratch</td><td>Hornet</td><td>IronNeedle</td></tr>
+<tr><td>Primordite</td><td>Numblade</td><td>Hazer</td><td>Bolt 2</td><td>Rhinotaur</td><td>Mega Volt</td></tr>
+<tr><td>Templar</td><td>Fire 2</td><td>Bomb</td><td>Blaze</td><td>Brawler</td><td>Stone</td></tr>
+<tr><td>Telstar</td><td>Sonic Boom</td><td>Over-Mind</td><td>Elf Fire</td><td>Exocite</td><td>Scissors</td></tr>
+<tr><td></td><td></td><td></td><td></td><td>Trilobiter</td><td>PoisonBarb</td></tr>
+<tr><td></td><td></td><td></td><td></td><td>Whisper</td><td>Demi</td></tr>
+</table>
+<p>
+Notes on Skills:
+<ul>
+<li>
+You won't use <span class="ab">Rhodox|Snare</span> much for a long time, but get it anyway. There are
+ few better ways to practice the lucrative profession of Intangir hunting.
+</li>
+<li>
+<span class="ab">Pterodon|Fire Ball</span> and <span class="ab">Marshal|Wind Slash</span> are great ways to clear a field; remember that,
+ although <span class="ab">Fire Ball</span> is stronger, <span class="ab">Wind Slash</span> doesn't divide damage when there
+ are several targets.
+</li>
+<li>
+<span class="ab">Areneid|Numb</span> and <span class="ab">Primordite|Numblade</span> are exactly the same. <span class="ab">Primordite</span>
+ protects against <span class="ref">Imp</span> and is weak against <span class="ref">Bolt</span> instead of <span class="ref">Water</span>
+ and <span class="ref">Ice</span>.
+</li>
+<li>
+<span class="ab">Telstar</span> and <span class="ab">Hazer</span> are the only Rages here with protection from instant <span class="ref">Death</span>;
+ however, <span class="ab">Telstar</span> also protects from everything else besides <span class="ref">Slow</span> and <span class="ref">Stop</span>.
+</li>
+<li>
+<span class="ab">Bomb|Blaze</span> only looks like a blue <span class="ref">Fire 1</span>, but it's actually stronger than <span class="ref">Fire 2</span>.
+</li>
+</ul>
+</p><p>
+Easily Missed Monsters:
+<ul>
+<li>
+<span class="ab">Dark Side</span> will only appear if you DON'T follow the sparkly thing through the
+ cave in Terra's scenario. Don't leave until you see <span class="ab">Dark Side</span>. Try to get
+ both formations!
+</li>
+<li>
+<span class="ab">Telstar</span> is a Monster-in-a-Box in a tent to far lower left of your entry into
+ the Imperial Base.
+</li>
+<li>
+<span class="ab">Over-Mind</span> is a somewhat rare monster found only inside the train cars of the
+ Phantom Train.
+</li>
+</ul>
+</p>
+
+<h3 style="page-break-before:always;">B. WORLD OF BALANCE: From the Serpent Trench to the Magitek Research Facility</h3>
+<p>
+If you're willing to walk a long way, you can teach Gau any Rage up to Zozo monsters BEFORE going to
+the Magitek Research Facility. You can get 
+<span class="ab">Anguiform|Aqua Rake</span> and <span class="ab">Aspik|Giga Volt</span>, which together make the Research 
+Facility a cakewalk.
+</p><p>
+Which monsters to keep an eye out for? Just a few gems...
+</p>
+<table class="rage">
+<tr><th colspan="2">Great Rages</th><th colspan="2">Awesome Rages</th><th colspan="2">Upgrades</th></tr>
+<tr><td>Hadesgigas</td><td>Magnitude8</td><td>Anguiform</td><td>Aqua Rake</td><td>SlamDancer</td><td>Ice 2</td></tr>
+<tr><td>Wyvern</td><td>Cyclonic</td><td>Aspik</td><td>Giga Volt</td></tr>
+<tr><td>Rhinox</td><td>Life 3</td><td>ChickenLip</td><td>Quake</td></tr>
+<tr><td></td><td></td><td>General</td><td>Cure 2</td></tr>
+</table>
+<p>
+Notes on Skills:
+<ul>
+<li>
+None of these monsters are hard to meet.
+</li>
+<li>
+Lots of strong multi-enemy attack spells here; <span class="ab">Hadesgigas|Magnitude8</span> is great, and <span class="ab">Anguiform|Aqua
+ Rake</span> can take care of fliers
+</li>
+<li>
+For some real shenanigans, have a character learn <span class="ref">Float</span> from Stray (obtained
+ in Zozo), <span class="ref">Float</span> your characters, and <span class="ab">ChickenLip|Quake</span> whenever you can. As
+ soon as you can, buy <span class="ref">Gaia Gear</span> from Thamasa, get Cyan and Edgar out of your
+ party (they can't wear <span class="ref">Gaia Gear</span> without a <span class="ref">Merit Award</span>), and you will heal
+ yourself with Gau's <span class="ab">Quake</span>s.
+</li>
+<li>
+<span class="ab">SlamDancer|Ice 2</span> has the advantage over <span class="ab">Dark Side|Ice 2</span> of not being
+ <span class="ref">undead</span> or having innate <span class="ab">Seizure</span>.
+</li>
+</ul>
+</p>
+
+<h3>C. WORLD OF BALANCE: From the Sealed Gate to the Floating Continent</h3>
+<p>
+This section is relatively uninteresting. Here are the good ones:
+</p>
+<table class="rage">
+<tr><th colspan="2">Great Rages</th><th colspan="2">Awesome Rages</th><th colspan="2">Upgrades</th></tr>
+<tr><td>Zombone</td><td>Condemned</td><td>Ninja</td><td>Water Edge</td><td>Chimera</td><td>Aqua Rake</td></tr>
+<tr><td>Ing</td><td>Lifeshaver</td><td>Intangir</td><td>Pep Up</td><td>Gigantos</td><td>Magnitude8</td></tr>
+<tr><td>Behemoth</td><td>Meteor</td></tr>
+</table>
+<p>
+Notes on Skills:
+<ul>
+<li>
+<span class="ab">Zombone|Condemned</span> and <span class="ab">Intangir|Pep Up</span> are the fastest ways to teach Strago
+ their <span class="ref">Lores</span>.
+</li>
+<li>
+<span class="ab">Anguiform|Aqua Rake</span> is outmoded by <span class="ab">Ninja|Water Edge</span> for flying monsters from here on;
+ but you might still consider <span class="ab">Chimera|Aqua Rake</span> for its superior protection
+ from status ailments and instant <span class="ref">Death</span>.
+</li>
+<li>
+<span class="ab">Gigantos</span>, unlike his "little" brother <span class="ab">Hadesgigas</span>, has <span class="ref">Protect</span>.
+</li>
+<li>
+If you <span class="ref">Mute</span> Gau before Raging <span class="ab">Intangir</span>, you have a <span class="ref">Hasted</span>, 
+<span class="ref">Safe</span>, <span class="ref">Shelled</span>, <span class="ref">Clear</span>, <span class="ref">Floated</span>, <span class="ref">'Ribboned'</span>,
+ element-absorbing behemoth of a character (but not protected from <span class="ref">Slow</span> or <span class="ref">Stop</span>).
+</li>
+</ul>
+</p>
+
+<h3 style="page-break-before:always;">D. WORLD OF RUIN: From the Solitary Island to the Daryl's Tomb</h3>
+<p>
+With small variations, the first half of the World of Ruin is basically linear.
+You'll likely come across all of these beasties without even thinking about it,
+although to be safe, make sure you don't leave the Solitary Island without
+watching an Earthguard starve to death.
+</p>
+<table class="rage">
+<tr><th colspan="2">Great Rages</th><th colspan="2">Awesome Rages</th><th colspan="2">Upgrades</th></tr>
+<tr><td>Earthguard</td><td>Big Guard</td><td>Peepers</td><td>Pearl Wind</td><td colspan="2" style="border:none;text-align:center;">--</td></tr>
+<tr><td>Buffalax</td><td>Slow 2</td><td>Gilomantis</td><td>Shrapnel</td></tr>
+<tr><td>Mad Oscar</td><td>Sour Mouth</td><td>Harpiai</td><td>Aero</td></tr>
+<tr><td>Orog</td><td>Pearl</td><td>PowerDemon</td><td>Flare</td></tr>
+<tr><td></td><td></td><td>Osteosaur</td><td>X-Zone</td></tr>
+<tr><td></td><td></td><td>Mesosaur</td><td>Step Mine</td></tr>
+</table>
+<p>
+Notes on Skills:
+<ul>
+<li>
+<span class="ab">Mesosaur|Step Mine</span> takes 319,968 steps to fully "charge."
+While potentially powerful and essentially free, this will not be achievable in a single sitting.
+</li>
+</ul>
+</p>
+
+<h3>E. WORLD OF RUIN: Miscellaneous Quests</h3>
+<p>
+If you're too weak to beat a monster, run away! It will still appear on the 
+Veldt. Use this for toughies like Tyranosaur if they tenderize you into 
+hero-burger.
+</p>
+<table class="rage">
+<tr><th colspan="2">Great Rages</th><th colspan="2">Awesome Rages</th><th colspan="2">Upgrades</th></tr>
+<tr><td>Punisher</td><td>Bolt 3</td><td>Nightshade</td><td>Charm</td><td>Vectaur</td><td>Pearl Wind</td></tr>
+<tr><td>SrBehemoth</td><td>Fire 3</td><td>Magic Urn</td><td>Cure 3</td><td>Evil Oscar</td><td>Bio</td></tr>
+<tr><td>Woolly</td><td>Ice 3</td><td>Tyranosaur</td><td>Meteo</td></tr>
+<tr><td>Luridian</td><td>Land Slide</td><td>Mover</td><td>Merton</td></tr>
+<tr><td></td><td></td><td>Retainer</td><td>Shock</td></tr>
+<tr><td></td><td></td><td>Veteran</td><td>Roulette</td></tr>
+</table>
+<p>
+Notes on Skills:
+<ul>
+<li>
+<span class="ab">Veteran|Roulette</span> and <span class="ab">Nightshade|Charm</span> are two very broken skills&mdash;the former
+ is an unblockable death spell; the latter is a permanent, single-target <span class="ref">Muddle</span>.
+</li>
+<li>
+Replace your dilapidated <span class="ab">Trilium</span> Rage with <span class="ab">Evil Oscar</span>&mdash;same delicious <span class="ab">Bio</span>
+ skill, exciting new element-absorbing package! (except <span class="ref">fire</span>).
+</li>
+<li>
+Use <span class="ab">Vectaur</span> instead of <span class="ab">Peepers</span> for <span class="ab">Pearl Wind</span>, because <span class="ref">Seizure</span> = bad.
+</li>
+<li>
+Which of Gau's offensive Rages is best? Depends on the context.
+	<ol>
+		<li>If you need to and can, exploit enemy elemental weaknesses with <span class="ab">Punisher|Bolt 3</span>,
+				<span class="ab">Woolly|Ice 3</span>, <span class="ab">ChickenLip|Quake</span>, <span class="ab">Orog|Pearl</span>,
+				or <span class="ab">Evil Oscar|Bio</span>.
+		</li>
+		<li>Failing that, do a <span class="ab">Mover|Merton</span>+<span class="ref">Flame Shld</span>s combo (esp. if the critter has a
+				weakness to <span class="ref">fire</span>/<span class="ref">wind</span>). Buy <span class="ref">Falchions</span> in Jidoor and bet them at the
+				Colliseum for <span class="ref">Flame Shld</span>s to equip your whole party.
+		</li>
+		<li>If <span class="ab">Merton</span>'s <span class="ref">fire</span> and <span class="ref">wind</span> elements work against you,
+				resort to <span class="ab">Tyranosaur|Meteo</span> or <span class="ab">Retainer|Shock</span> for multiple enemies,
+				or <span class="ab">Luridian|Land Slide</span> for one as it is less likely to miss.
+		</li>
+		<li>Or just use <span class="ab">Meteo</span> constantly.
+		</li>
+	</ol>
+</li>
+</ul>
+</p>
+<p class="title">
+<span>STRAGO</span>
+<p>
+
+<h3>A. WORLD OF BALANCE</h3>
+<p>
+Lores to Collect:
+<table class="lore">
+<tr><td>Aqua Rake</td><td>Stone</td><td>Revenge</td><td>Exploder</td><td>Pearl Wind</td></tr>
+<tr><td>Condemned</td><td>Pep Up</td><td>Step Mine</td><td>Dischord</td><td>L.3 Muddle</td></tr>
+<tr><td>L.4 Flare</td><td>L.5 Doom</td><td>Roulette</td><td>Blow Fish</td></tr>
+</table>
+</p>
+<p>
+Strago begins with <span class="ab">Aqua Rake</span>, <span class="ab">Stone</span>, and <span class="ab">Revenge</span>. In the burning house in 
+Thamasa, cast a <span class="ref">fire</span> spell on a <span class="ab">Balloon</span> and it might cast <span class="ab">Exploder</span>. Go to 
+Esper Mountain and fight an <span class="ab">Abolisher</span>. Give it three turns, and you have <span class="ab">Pearl Wind</span>.
+</p>
+<p>
+When you have control of your whole party, retrieve Gau and have him use 
+<span class="ab">Zombone|Condemned</span> and <span class="ab">Intangir|Pep Up</span> for those Lores. Then fly to South Figaro
+and <span class="ref">muddle</span> a <span class="ab">Greasemonk</span> for <span class="ab">Step Mine</span>.
+</p>
+<p>
+Now, go to the Veldt. Fight a <span class="ab">Telstar</span> for ten turns, and you will have 
+<span class="ab">Dischord</span>. Sit down with a few <span class="ab">Trappers</span> to learn
+all of <span class="ab">L.3 Muddle</span>, <span class="ab">L.4 Flare</span>, and <span class="ab">L.5 Doom</span>.
+With Relm, <span class="ref">sketch</span> a <span class="ab">Pipsqueak</span> for <span class="ab">Roulette</span>.
+</p>
+<p>
+Finally, on the Floating Continent, battle some <span class="ab">Brainpans</span> and slaughter all 
+but one. It will use <span class="ab">Blow Fish</span>.
+</p>
+
+<h3>B. WORLD OF RUIN</h3>
+<p>
+Lores to Collect:
+<table class="lore">
+<tr><td>Big Guard</td><td>Rippler</td><td>Aero</td><td>Sour Mouth</td><td>CleanSweep</td></tr>
+<tr><td>L.? Pearl</td><td>GrandTrain</td><td>Quasar</td><td>Reflect???</td><td>ForceField</td></tr>
+</table>
+</p>
+<p>
+Most of these Lores are easy. After you use Relm to rescue Strago, <span class="ref">Sketch</span> an 
+<span class="ab">Reach Frog</span> or two for <span class="ab">Rippler</span>. Fly to Kohlingen and fight a <span class="ab">Harpiai</span>
+<span class="ab">EarthGuard</span> for <span class="ab">Big Guard</span>. Then zip over to the land outside Maranda and fight a 
+for <span class="ab">Aero</span>, then run into Daryl's Tomb to learn <span class="ab">Sour Mouth</span> from a <span class="ab">Mad Oscar</span>.
+Burrow down to the Ancient Castle, where an <span class="ab">Enuo</span> will use <span class="ab">CleanSweep</span> when you kill its buddies.
+</p>
+<p>
+<span class="ab">L.? Pearl</span> gives you a couple of options. If you haven't done the Phoenix Cave, 
+I recommend going there and letting Relm <span class="ref">Sketch</span> the <span class="ab">Red Dragon</span>. Otherwise, 
+take Strago into Cyan's Dream and fight some <span class="ab">Critics</span>. If both events are gone, 
+you can muck about for <span class="ab">Critics</span> in the Veldt, or fight <span class="ab">Innoc</span> in Kefka's Tower. 
+I suggest the former.
+</p>
+<p>
+For <span class="ab">GrandTrain</span>, go complete Strago's side quest, and make sure to kill all the 
+little Hidonites first - then you're in business. <span class="ab">Dark Force</span> has a one-in-
+three chance, every seven turns of casting <span class="ab">Quasar</span> and <span class="ab">Reflect???</span>, so be
+patient. Sadly, the only way to learn <span class="ab">ForceField</span> is to kill <span class="ab">Doom</span> - the first
+statue.
+</p>
+
+<p class="title">
+<span>BOSSES</span>
+</p>
+<p>TEST</p>
+<table class="status">
+<tr><th>Blind</th><td>&#x281d;</td><td>&#x16e4;</td><td style="border:solid 1px;">&#x1f576;</td></tr>
+<tr><th>Death</th><td style="border:solid 1px;">&#x1c6a;</td></tr>
+<tr><th>Stone</th><td>&#xf13;</td><td>&#x2c0e;</td><td>&#x2c0f;</td><td>&#x7f7;</td><td>&#xa501;</td><td>&#x1f94c;</td><td>&#x1242c;</td><td>&#x1f019;</td>
+	<td style="font-family:Segoe UI Image;border:solid 1px;">&#x1f5ff;</td></tr>
+<tr><th>Imp</th><td>&#x7f7;</td><td>&#xf15;</td><td>&#x2369;</td><td>&#x2c02;</td><td>&#xa5ed;</td><td>&#x10c26;</td><td>&#x1317d;</td><td>&#x13189;</td>
+	<td>&#x1f422;</td></tr>
+<tr><th>Poison</th><td>&#xb83;</td><td>&#x2620;</td><td style="border:solid 1px;">&#x1f571;</td></tr>
+<tr><th>Sleep</th><td>&#x1886;</td><td>&#x1303f;</td><td>&#x132ad;</td><td>&#x1d13d;</td><td style="border:solid 1px;"><span>&#x1f4a4;</span></td></tr>
+<tr><th>Muddle</th><td>&#x3ff;</td><td style="border:solid 1px;">&#x1f4ab;</td></tr>
+<tr><th>Berserk</th><td>&#x2ac;</td><td>&#xca0;</td><td>&#x1f47f;</td><td style="border:solid 1px;">&#x1f479;</td><td>&#x1f5ee;</td></tr>
+<tr><th>Mute</th><td>&#x1692;</td><td>&#x1801;</td><td>&#x1a1e;</td><td>&#x1367;</td><td>&#x22ef;</td><td>&#x22f1;</td><td>&#x22ee;</td><td>&#x20dd;&#x22ef;</td>
+	<td>&#x20dd;&#x22f1;</td><td>&#x20dd;&#x22ee;</td><td>&#x2687;</td><td>&#xe0bc;</td><td style="border:solid 1px;"><span>&#xe0c1;</span></td><td>&#x1f4ac;</td></tr>
+<tr><th>Condemned</th><td>&#xd60;</td><td>&#x2364;</td><td>&#x2363;</td><td style="border:solid 1px;">&#x2696;</td></tr>
+<tr><th>Stop</th><td>&#x20e0;</td><td>&#x2297;</td><td>&#x23F1;</td><td>&#x26e3;</td><td>&#x2bc3;</td><td>&#xe0ca;</td>
+	<td style="border:solid 1px;"><span>&#xE283;</span></td></tr>
+<tr><th>Slow</th><td>&#x231b;</td><td>&#x231a;</td><td>&#x25d4;</td><td>&#x25f4;</td><td style="border:solid 1px;">&#x1f557;</td><td>&#x1f578;</td></tr>
+					
+<tr><th>Undead</th><td>&#x2617;</td><td>&#x2623;</td><td>&#x2620;</td><td>&#x1f9db;</td><td>&#x1f9df;</td><td style="border:solid 1px;">&#x1f480;</td></tr>
+ 
+<tr><th>Fire</th><td>&#xdc0;</td><td>&#x2f55;</td><td style="border:solid 1px;">&#x1f525;</td><td>&#x1f702;</td></tr>
+<tr><th>Ice</th><td>&#x1368;</td><td>&#x203b;</td><td>&#x2042;</td><td style="border:solid 1px;">&#x2744;</td></tr>
+<tr><th>Lightning</th><td>&#x9a6;</td><td>&#x26a1;</td><td>&#xe289;</td><td>&#x109ae;</td><td>&#x10c25;</td><td>&#x10c29;</td><td style="border:solid 1px;">&#x1f5f2;</td></tr>
+<tr><th>Earth</th><td>&#xdf4;</td><td>&#x113f;</td><td style="border:solid 1px;">&#x23da;</td><td>&#x26f0;</td><td>&#x1f703;</td><td>&#x1f5fb;</td></tr>
+<tr><th>Wind</th><td>&#xb6d;</td><td>&#xf04;</td><td>&#xf06;</td><td>&#x181D;</td><td>&#x224b;</td><td>&#x2fb5;</td><td>&#x1230d;</td><td style="border:solid 1px;">&#x1f300;</td>
+	<td>&#x1f701;</td></tr>
+<tr><th>Water</th><td>&#x1886;</td><td>&#xc0b;</td><td>&#xa540;</td><td>&#x13217;</td><td style="border:solid 1px;">&#x1f30a;</td><td>&#x1f704;</td></tr>
+<tr><th>Poison</th><td>&#xb83;</td><td>&#x2620;</td><td style="border:solid 1px;">&#x1f571;</td></tr>
+<tr><th>Pearl</th><td>&#x6dd;</td><td>&#x25cb;</td><td>&#x25ce;</td><td>&#x26aa;</td><td style="border:solid 1px;">&#x274d;</td><td>&#x1104d;</td></tr>
+</table>
+
+
+
+<table class="boss">
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
