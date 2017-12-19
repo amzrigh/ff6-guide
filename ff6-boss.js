@@ -29,12 +29,16 @@ function renderTable(monster) {
 					"<tr><td>" + drawImage(monster) + "</td></tr>" +
 				"</table>" +
 			"<td>" + writeAllStats(boss.stats) + "</td>" +
-			"<td>" + writeAffinity(boss.affin) + "</td></tr>" +
-			"<tr><th colspan=\"3\">Notes</th></tr>" +
-			"<tr><td colspan=\"3\">" + writeNotes(boss.notes) + "</td></tr>" +
-			"<tr><th colspan=\"3\">Wanted</th></tr>" +
-			"<tr><td colspan=\"3\">" + writeNotes(boss.wanted) + "</td></tr>" +
-		"</table>"
+			"<td>" + writeAffinity(boss.affin) + "</td></tr>";
+	if(boss.notes.length > 0) {
+		bossTable += "<tr><th class=\"notes\" colspan=\"3\">Notes</th></tr>" +
+			"<tr><td colspan=\"3\">" + writeNotes(boss.notes) + "</td></tr>";
+	}
+	if(boss.wanted.length > 0) {
+		bossTable += "<tr><th class=\"notes\" colspan=\"3\">Wanted</th></tr>" +
+			"<tr><td colspan=\"3\">" + writeNotes(boss.wanted) + "</td></tr>";
+	}
+	bossTable += "</table>";
 	document.write(bossTable);
 }
 
@@ -98,7 +102,7 @@ function writeAffinityGroup(ag) {
 	if(ag.length > 0) {
 		tableContent = "<table class=\"symbols\">";
 		for (var i = 0; i < ag.length; i++) {
-			if(i % 3 == 0) {
+			if(i % 4 == 0) {
 				if(i > 0) {
 					tableContent += "</tr>";
 				}

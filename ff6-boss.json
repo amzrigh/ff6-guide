@@ -1020,26 +1020,6 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"" : {
-		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
-		},
-		"affin" : {
-			"weak" : [],
-			"vuln" : [],
-			"resist" : [],
-			"absorb" : []
-		},
-		"notes" : [],
-		"wanted" : []
-	},
 	"Ipooh" : {
 		"stats" : {
 			"hp" : 360,
@@ -1645,7 +1625,7 @@ var bosses = {
 			"eva" : 0,
 			"matk" : 7,
 			"mdef" : 150,
-			"meva" : ,0
+			"meva" : 0,
 		},
 		"affin" : {
 			"weak" : [
@@ -2395,182 +2375,282 @@ var bosses = {
 	},
 	"Ultros (Lete)" : {
 		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
+			"hp" : 3000,
+			"mp" : 640,
+			"atk" : 15,
+			"def" : 40,
+			"eva" : 0,
+			"matk" : 3,
+			"mdef" : 140,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Lightning"
+			],
+			"vuln" : [
+				"Blind",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Water"
+			]
+		},
+		"notes" : [
+			"Keep everybody in the back row"
+		],
+		"wanted" : []
+	},
+	"Ultros (Opera)" : {
+		"stats" : {
+			"hp" : 2550,
+			"mp" : 500,
+			"atk" : 13,
+			"def" : 105,
+			"eva" : 0,
+			"matk" : 4,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Lightning"
+			],
+			"vuln" : [
+				"Blind",
+				"Mute",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Water"
+			]
+		},
+		"notes" : [
+			"Equip Ramuh on someone other than Sabin, summon him first",
+			"Don't use Blitz or SwdTech",
+			"Rage Aspik or Primordite/Areneid"
+		],
+		"wanted" : []
+	},
+	"Ultros (Cave)" : {
+		"stats" : {
+			"hp" : 22000,
+			"mp" : 750,
+			"atk" : 22,
+			"def" : 95,
+			"eva" : 0,
+			"matk" : 7,
+			"mdef" : 155,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Lightning"
+			],
+			"vuln" : [
+				"Blind",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Water"
+			]
+		},
+		"notes" : [
+			"Gaia Gear to resist Aqua Rake and Magnitude8",
+			"Phase 2 at 15360 HP&mdash;Haste, Safe, magic counter"
+		],
+		"wanted" : []
+	},
+	"Ultros (Sky)" : {
+		"stats" : {
+			"hp" : 17000,
+			"mp" : 8000,
+			"atk" : 10,
+			"def" : 20,
+			"eva" : 0,
+			"matk" : 3,
+			"mdef" : 10,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Poison"
+			],
+			"vuln" : [
+				"Blind",
+				"Mute",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Water"
+			]
+		},
+		"notes" : [
+			"Phantom to negate physical attacks, Mute Chupon"
+		],
+		"wanted" : []
+	},
+	"Umaro" : {
+		"stats" : {
+			"hp" : 17200,
+			"mp" : 6990,
+			"atk" : 25,
+			"def" : 100,
+			"eva" : 0,
+			"matk" : 11,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Fire",
+				"Poison"
+			],
+			"vuln" : [
+				"Blind",
+				"Poison",
+				"Berserk",
+				"Sleep",
+				"Slow"
+			],
+			"resist" : [],
+			"absorb" : [
+				"Ice"
+			]
+		},
+		"notes" : [
+			"Berserk/Phantom or Sleep/Slow",
+			"Dispel after Green Cherry"
+		],
+		"wanted" : [
+			"Mog"
+		]
+	},
+	"Vargas" : {
+		"stats" : {
+			"hp" : 11600,
+			"mp" : 220,
+			"atk" : 13,
+			"def" : 85,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 150,
+			"meva" : 0,
+		},
+		"affin" : {
+			"weak" : [
+				"Poison"
+			],
+			"vuln" : [
+				"Blind",
+				"Slow",
+				"Stop"
+			],
+			"resist" : [],
+			"absorb" : []
+		},
+		"notes" : [
+			"Steal Mithril Claw"
+		],
+		"wanted" : []
+	},
+	"Whelk" : {
+		"stats" : {
+			"hp" : 1600,
+			"mp" : 1000,
+			"atk" : 22,
+			"def" : 100,
+			"eva" : 0,
+			"matk" : 10,
+			"mdef" : 155,
+			"meva" : 0,
 		},
 		"affin" : {
 			"weak" : [],
-			"vuln" : [],
+			"vuln" : [
+				"Slow",
+				"Stop"
+			],
 			"resist" : [],
 			"absorb" : []
 		},
 		"notes" : [],
 		"wanted" : []
 	},
-	"" : {
+	"White Drgn" : {
 		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
+			"hp" : 18500,
+			"mp" : 12000,
+			"atk" : 13,
+			"def" : 110,
+			"eva" : 0,
+			"matk" : 9,
+			"mdef" : 150,
+			"meva" : 0,
 		},
 		"affin" : {
 			"weak" : [],
-			"vuln" : [],
+			"vuln" : [
+				"Blind",
+				"Mute",
+				"Slow",
+				"Stop"
+			],
 			"resist" : [],
-			"absorb" : []
+			"absorb" : [
+				"Pearl"
+			]
 		},
-		"notes" : [],
+		"notes" : [
+			"Uses only magic attacks; cast Mute",
+			"Steal Pearl Lance",
+			"&#x215b; chance of Metamorph success"
+		],
 		"wanted" : []
 	},
-	"" : {
+	"Wrexsoul" : {
 		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
+			"hp" : 23066,
+			"mp" : 5066,
+			"atk" : 27,
+			"def" : 70,
+			"eva" : 0,
+			"matk" : 5,
+			"mdef" : 220,
+			"meva" : 0,
 		},
 		"affin" : {
-			"weak" : [],
-			"vuln" : [],
+			"weak" : [
+				"Ice"
+			],
+			"vuln" : [
+				"Blind"
+			],
 			"resist" : [],
-			"absorb" : []
+			"absorb" : [
+				"Fire",
+				"Pearl"
+			]
 		},
-		"notes" : [],
-		"wanted" : []
-	},
-	"" : {
-		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
-		},
-		"affin" : {
-			"weak" : [],
-			"vuln" : [],
-			"resist" : [],
-			"absorb" : []
-		},
-		"notes" : [],
-		"wanted" : []
-	},
-	"" : {
-		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
-		},
-		"affin" : {
-			"weak" : [],
-			"vuln" : [],
-			"resist" : [],
-			"absorb" : []
-		},
-		"notes" : [],
-		"wanted" : []
-	},
-	"" : {
-		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
-		},
-		"affin" : {
-			"weak" : [],
-			"vuln" : [],
-			"resist" : [],
-			"absorb" : []
-		},
-		"notes" : [],
-		"wanted" : []
-	},
-	"" : {
-		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
-		},
-		"affin" : {
-			"weak" : [],
-			"vuln" : [],
-			"resist" : [],
-			"absorb" : []
-		},
-		"notes" : [],
-		"wanted" : []
-	},
-	"" : {
-		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
-		},
-		"affin" : {
-			"weak" : [],
-			"vuln" : [],
-			"resist" : [],
-			"absorb" : []
-		},
-		"notes" : [],
-		"wanted" : []
-	},
-	"" : {
-		"stats" : {
-			"hp" : ,
-			"mp" : ,
-			"atk" : ,
-			"def" : ,
-			"eva" : ,
-			"matk" : ,
-			"mdef" : ,
-			"meva" : ,
-		},
-		"affin" : {
-			"weak" : [],
-			"vuln" : [],
-			"resist" : [],
-			"absorb" : []
-		},
-		"notes" : [],
-		"wanted" : []
+		"notes" : [
+			"Equip Minerva, Thunder Shields",
+			"If Strago gets possessed, use Exploder; anybody else, use Break",
+			"Use Ice or barrier-piercing attacks",
+			"Steal Memento Ring"
+		],
+		"wanted" : [
+			"Strago (Exploder)"
+		]
 	}
 };
