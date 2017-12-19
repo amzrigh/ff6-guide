@@ -60,8 +60,9 @@ function drawImage(name) {
 function writeAllStats(stats) {
 	return "<table class=\"colstats\">" +
 			"<tr>" + writeStat(stats, "HP") + writeStat(stats, "MP") + "</tr>" +
-			"<tr>" + writeStat(stats, "Atk") + writeStat(stats, "Def") + writeStat(stats, "Eva") + "</tr>" +
-			"<tr>" + writeStat(stats, "MAtk") + writeStat(stats, "MDef") + writeStat(stats, "MEva") + "</tr>" +
+			"<tr>" + writeStat(stats, "Atk") + writeStat(stats, "MAtk") + "</tr>" +
+			"<tr>" + writeStat(stats, "Def") + writeStat(stats, "MDef") + "</tr>" +
+			"<tr>" + writeStat(stats, "Eva") + writeStat(stats, "MEva") + "</tr>" +
 		"</table>";
 }
 

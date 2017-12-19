@@ -2225,7 +2225,10 @@ var bosses = {
 				"Water"
 			]
 		},
-		"notes" : [],
+		"notes" : [
+			"Running Shoes and Fenrir/Golem prevent Seize",
+			"Siren/Mute #1 & 2, Doom #3, Stop #4",
+		],
 		"wanted" : []
 	},
 	"Tentacle (3)" : {
@@ -2255,10 +2258,7 @@ var bosses = {
 				"Water"
 			]
 		},
-		"notes" : [
-			"Running Shoes and Fenrir/Golem prevent Seize",
-			"Siren/Mute #1 & 2, Doom #3, Stop #4",
-		],
+		"notes" : [],
 		"wanted" : []
 	},
 	"Tiger" : {
