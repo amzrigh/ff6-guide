@@ -7,7 +7,7 @@ var symbols = {
 	"Water" : "&#x1f30a;",
 	"Pearl" : "&#x274d;",
 	"Blind" : "&#x1f576;",
-	"Death" : "&#x1c6a;",
+	"Death" : "&#x26fc;",
 	"Stone" : "<span>&#x1f5ff;</span>",
 	"Imp" : "&#x1f422;",
 	"Poison" : "&#x1f571;",
@@ -103,7 +103,7 @@ function writeAffinityGroup(ag) {
 	if(ag.length > 0) {
 		tableContent = "<table class=\"symbols\">";
 		for (var i = 0; i < ag.length; i++) {
-			if(i % 4 == 0) {
+			if(i % 6 == 0) {
 				if(i > 0) {
 					tableContent += "</tr>";
 				}

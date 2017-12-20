@@ -635,6 +635,7 @@ var bosses = {
 			]
 		},
 		"notes" : [
+			"Summon Golem or Fenrir at start of battle",
 			"Will revive Sleep",
 			"Focus down with non-elemental attacks",
 			"Steal Ragnarok"
@@ -947,10 +948,11 @@ var bosses = {
 			"absorb" : []
 		},
 		"notes" : [
-			"Berserk, Phantom",
+			"Berserk, Phantom, Love Sonata",
 			"&#x215b; chance of Metamorph success"
 		],
 		"wanted" : [
+			"Mog",
 			"Phantom",
 			"Ragnarok maybe?"
 		]
@@ -1950,9 +1952,7 @@ var bosses = {
 			"resist" : [],
 			"absorb" : []
 		},
-		"notes" : [
-			"Summon Golem or Fenrir at start of battle"
-		],
+		"notes" : [],
 		"wanted" : []
 	},
 	"SoulSaver" : {
@@ -2015,7 +2015,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"SrBehemoth 1" : {
+	"SrBehemoth (1)" : {
 		"stats" : {
 			"hp" : 19000,
 			"mp" : 1600,
@@ -2049,7 +2049,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"SrBehemoth 2" : {
+	"SrBehemoth (2)" : {
 		"stats" : {
 			"hp" : 19000,
 			"mp" : 9999,
@@ -2067,7 +2067,7 @@ var bosses = {
 			],
 			"vuln" : [
 				"Undead",
-				"Dark",
+				"Blind",
 				"Death"
 			],
 			"resist" : [],

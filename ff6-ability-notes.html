@@ -5,41 +5,41 @@
 	page-break-before:always;
 	position:relative;
 	top:10px;
-	}
+}
 .title span {
 	border-style: double solid;
 	font-style: bold;
 	align: center;
 	padding: 5px;
-	}
+}
 table.rage {
 	text-align:center;
 	border-spacing: 0px 3px;
-	}
+}
 table.rage th {
 	border-bottom: solid 2px;
-	}
+}
 table.rage td:nth-child(even) {
 	text-align:left;
 	padding-right: 8px;
-	}
+}
 table.rage td:nth-child(odd):not(:empty) {
 	text-align:right;
 	padding-left: 8px;
 	border-right:solid 1px;
-	}
+}
 table.lore {
 	border-spacing:12px 3px;
-	}
+}
 span.ab {
 	font-weight: bold;
-	}
+}
 span.ref {
 	font-style: italic;
-	}
+}
 .status { //large unicode characters
 	spacing: 2px;
-	}
+}
 .status td {
 	font-size: 24px;
 	width: 32px;
@@ -50,12 +50,15 @@ span.ref {
 	text-align: center;
 	vertical-align: midline;
 	overflow: hidden;
-	}
+}
 .status td span {
 	display: inline-block;
 	vertical-align: baseline;
 	border: 1px solid;
-	}
+}
+.dance th {
+	text-align: left;
+}
 </style>
 <script>
 /*
@@ -488,44 +491,129 @@ statue.
 </p>
 
 <p class="title">
-<span>BOSSES</span>
+<span>MOG</span>
 </p>
-<p>TEST</p>
-<table class="status">
-<tr><th>Blind</th><td>&#x281d;</td><td>&#x16e4;</td><td style="border:solid 1px;">&#x1f576;</td></tr>
-<tr><th>Death</th><td style="border:solid 1px;">&#x1c6a;</td></tr>
-<tr><th>Stone</th><td>&#xf13;</td><td>&#x2c0e;</td><td>&#x2c0f;</td><td>&#x7f7;</td><td>&#xa501;</td><td>&#x1f94c;</td><td>&#x1242c;</td><td>&#x1f019;</td>
-	<td style="font-family:Segoe UI Image;border:solid 1px;">&#x1f5ff;</td></tr>
-<tr><th>Imp</th><td>&#x7f7;</td><td>&#xf15;</td><td>&#x2369;</td><td>&#x2c02;</td><td>&#xa5ed;</td><td>&#x10c26;</td><td>&#x1317d;</td><td>&#x13189;</td>
-	<td>&#x1f422;</td></tr>
-<tr><th>Poison</th><td>&#xb83;</td><td>&#x2620;</td><td style="border:solid 1px;">&#x1f571;</td></tr>
-<tr><th>Sleep</th><td>&#x1886;</td><td>&#x1303f;</td><td>&#x132ad;</td><td>&#x1d13d;</td><td style="border:solid 1px;"><span>&#x1f4a4;</span></td></tr>
-<tr><th>Muddle</th><td>&#x3ff;</td><td style="border:solid 1px;">&#x1f4ab;</td></tr>
-<tr><th>Berserk</th><td>&#x2ac;</td><td>&#xca0;</td><td>&#x1f47f;</td><td style="border:solid 1px;">&#x1f479;</td><td>&#x1f5ee;</td></tr>
-<tr><th>Mute</th><td>&#x1692;</td><td>&#x1801;</td><td>&#x1a1e;</td><td>&#x1367;</td><td>&#x22ef;</td><td>&#x22f1;</td><td>&#x22ee;</td><td>&#x20dd;&#x22ef;</td>
-	<td>&#x20dd;&#x22f1;</td><td>&#x20dd;&#x22ee;</td><td>&#x2687;</td><td>&#xe0bc;</td><td style="border:solid 1px;"><span>&#xe0c1;</span></td><td>&#x1f4ac;</td></tr>
-<tr><th>Condemned</th><td>&#xd60;</td><td>&#x2364;</td><td>&#x2363;</td><td style="border:solid 1px;">&#x2696;</td></tr>
-<tr><th>Stop</th><td>&#x20e0;</td><td>&#x2297;</td><td>&#x23F1;</td><td>&#x26e3;</td><td>&#x2bc3;</td><td>&#xe0ca;</td>
-	<td style="border:solid 1px;"><span>&#xE283;</span></td></tr>
-<tr><th>Slow</th><td>&#x231b;</td><td>&#x231a;</td><td>&#x25d4;</td><td>&#x25f4;</td><td style="border:solid 1px;">&#x1f557;</td><td>&#x1f578;</td></tr>
-					
-<tr><th>Undead</th><td>&#x2617;</td><td>&#x2623;</td><td>&#x2620;</td><td>&#x1f9db;</td><td>&#x1f9df;</td><td style="border:solid 1px;">&#x1f480;</td></tr>
- 
-<tr><th>Fire</th><td>&#xdc0;</td><td>&#x2f55;</td><td style="border:solid 1px;">&#x1f525;</td><td>&#x1f702;</td></tr>
-<tr><th>Ice</th><td>&#x1368;</td><td>&#x203b;</td><td>&#x2042;</td><td style="border:solid 1px;">&#x2744;</td></tr>
-<tr><th>Lightning</th><td>&#x9a6;</td><td>&#x26a1;</td><td>&#xe289;</td><td>&#x109ae;</td><td>&#x10c25;</td><td>&#x10c29;</td><td style="border:solid 1px;">&#x1f5f2;</td></tr>
-<tr><th>Earth</th><td>&#xdf4;</td><td>&#x113f;</td><td style="border:solid 1px;">&#x23da;</td><td>&#x26f0;</td><td>&#x1f703;</td><td>&#x1f5fb;</td></tr>
-<tr><th>Wind</th><td>&#xb6d;</td><td>&#xf04;</td><td>&#xf06;</td><td>&#x181D;</td><td>&#x224b;</td><td>&#x2fb5;</td><td>&#x1230d;</td><td style="border:solid 1px;">&#x1f300;</td>
-	<td>&#x1f701;</td></tr>
-<tr><th>Water</th><td>&#x1886;</td><td>&#xc0b;</td><td>&#xa540;</td><td>&#x13217;</td><td style="border:solid 1px;">&#x1f30a;</td><td>&#x1f704;</td></tr>
-<tr><th>Poison</th><td>&#xb83;</td><td>&#x2620;</td><td style="border:solid 1px;">&#x1f571;</td></tr>
-<tr><th>Pearl</th><td>&#x6dd;</td><td>&#x25cb;</td><td>&#x25ce;</td><td>&#x26aa;</td><td style="border:solid 1px;">&#x274d;</td><td>&#x1104d;</td></tr>
-</table>
-
-
-
-<table class="boss">
-
+<table class="dances">
+	<tr>
+		<td>
+			<table class="dance">
+				<tr>
+					<th>
+						Wind Song
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Wind *, Lightning, Break, Heal *
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table class="dance">
+				<tr>
+					<th>
+						Forest Suite
+					</th>
+				</tr>
+				<tr>
+					<td>
+						*, piercing grounded, Fire, Status *
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table class="dance">
+				<tr>
+					<th>
+						Desert Aria
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Wind *, Wind *, KO, Haste *
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table class="dance">
+				<tr>
+					<th>
+						Love Sonata
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Fire, Muddle, KO, Status * + Heal(Sleep)
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table class="dance">
+				<tr>
+					<th>
+						Earth Blues
+					</th>
+				</tr>
+				<tr>
+					<td>
+						piercing, HP-based + Sap, piercing grounded, Heal *
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table class="dance">
+				<tr>
+					<th>
+						Water Rondo
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Water *, Lightning, Confuse, Heal * + Status
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table class="dance">
+				<tr>
+					<th>
+						Dusk Requiem
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Fire, Poison, HP-based + Sap, KO
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table class="dance">
+				<tr>
+					<th>
+						Snowman Jazz
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Ice *, HP-based + Sap, KO, Heal *
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
 </body>
 </html>
 
