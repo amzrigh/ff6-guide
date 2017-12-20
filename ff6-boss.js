@@ -23,13 +23,13 @@ var symbols = {
 function renderTable(monster) {
 	var boss = bosses[monster]
 	var bossTable = "<table class=\"boss\">" +
-			"<tr><td>" +
-				"<table class=\"colname\">" +
+			"<tr><td class=\"colname\">" +
+				"<table>" +
 					"<tr><th>" + monster + "</th></tr>" +
 					"<tr><td>" + drawImage(monster) + "</td></tr>" +
 				"</table>" +
-			"<td>" + writeAllStats(boss.stats) + "</td>" +
-			"<td>" + writeAffinity(boss.affin) + "</td></tr>";
+			"<td class=\"colstats\">" + writeAllStats(boss.stats) + "</td>" +
+			"<td class=\"colaffin\">" + writeAffinity(boss.affin) + "</td></tr>";
 	if(boss.notes.length > 0) {
 		bossTable += "<tr><th class=\"notes\" colspan=\"3\">Notes</th></tr>" +
 			"<tr><td colspan=\"3\">" + writeNotes(boss.notes) + "</td></tr>";
@@ -58,7 +58,7 @@ function drawImage(name) {
 }
 
 function writeAllStats(stats) {
-	return "<table class=\"colstats\">" +
+	return "<table>" +
 			"<tr>" + writeStat(stats, "HP") + writeStat(stats, "MP") + "</tr>" +
 			"<tr>" + writeStat(stats, "Atk") + writeStat(stats, "MAtk") + "</tr>" +
 			"<tr>" + writeStat(stats, "Def") + writeStat(stats, "MDef") + "</tr>" +
@@ -72,7 +72,7 @@ function writeStat(stats, stat) {
 }
 
 function writeAffinity(affin) {
-	return "<table class=\"colaffin\">" +
+	return "<table>" +
 			"<tr><td>" +
 				"<table class=\"affin-grp\">" +
 					"<tr><th>Vuln</th></tr>" +
@@ -129,7 +129,18 @@ function writeNotes(notes) {
 	return notesContent;
 }
 
+function partyGroup(grp, party) {
+	span = "<span class=\"" + grp + "\">";
+	for(i = 0; i < party.length; i++) {
+		span += drawChar(party[i]);
+	}
+	span += "</span>";
+	document.write(span);
+}
 
+function drawChar(name) {
+	return "<img src=\"images/char/" + name + ".png\" />";
+}
 
 
 

@@ -513,7 +513,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Flame Eater" : {
+	"FlameEater" : {
 		"stats" : {
 			"hp" : 8400,
 			"mp" : 480,

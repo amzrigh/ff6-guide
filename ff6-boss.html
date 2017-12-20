@@ -20,32 +20,52 @@
 			.boss th {
 				background-color: #dddddd;
 				padding: 1px 4px;
+				height: 20px;
 			}
 			.boss td {
 				vertical-align: top;
 				padding: 0px;
 			}
 			.boss table {
+				margin: initial;
 				width: 100%;
 			}
 			.colname {
+				width: 160px;
+			}
+			.colname table {
 				text-align: center;
 				vertical-align: middle;
 				border-spacing: 0px 1px;
+				height: 100%;
 			}
-			.colstats th {
+			.colname td {
+				vertical-align: middle;
+				margin: auto;
+			}
+			.colstats table {
+				border-spacing: 1px;
+			}
+			.colstats table th {
 				text-align: right;
+				width: 50px;
 			}
-			table.colaffin {
+			.colstats table td {
+				width: 44px;
+			}
+			.colaffin {
 				width: 316px;
 			}
-			.colaffin td {
-				border-spacing: 1px;
+			.colaffin > table > tbody > tr > td {
 				padding: 0px;
 				width: 50%;
 			}
+			.affin-grp {
+				border-spacing: 1px 0px;
+			}
 			.affin-grp td {
 				text-align: center;
+				height: 29px;
 			}
 			table.symbols {
 				width: initial;
@@ -66,41 +86,112 @@
 			.notes {
 				text-align: left;
 			}
+			.boss ul {
+				list-style-type: none;
+				padding-left: 20px;
+				indent: -10px;
+			}
+			.chars {
+				display: inline-block;
+				height: 28px;
+				padding: 5px;
+				vertical-align: middle;
+			}
+			.chars img {
+				padding: 2px 4px;
+			}
+			.chars span {
+				display: inline-block;
+				height: 100%;
+				vertical-align: inherit;
+			}
+			.party {
+				border-style: solid;
+				border-width: 1px 0px;
+			}
+			.a::after {
+				content: "A";
+				text-size: 6px;
+				text-align: center;
+				position: relative;
+				top: -10px;
+			}
+			.locked {
+				background-color: #000000;
+			}
+			.leftover img {
+				opacity: 0.5;
+			}
+			.party-spacer {
+				width: 30px;
+			}
+			hr.break {
+				
+			}
+			hr.battle {
+				border: 1px;
+				border-style: solid none;
+				height: 1px;
+			}
+			hr.enemy {
+				border-style: hidden;
+				border-bottom: 1px dashed #ccc;
+				background: #999;
+				height: 0px;
+			}
 		</style>
 		<script src="ff6-boss.json"></script>
 		<script src="ff6-boss.js"></script>
 	</head>
 	<body>
 		<script>renderTable("Whelk");</script>
-		<hr />
+		<hr class="battle" />
 		<script>renderTable("Marshal");</script>
-		<hr />
+		<hr class="battle" />
 		<script>renderTable("Ipooh");</script>
+		<hr class="enemy" />
 		<script>renderTable("Vargas");</script>
-		<hr />
-		<p>[River Path]</p>
+		<hr class="battle" />
+		<p>Lete River: LEFT</p>
 		<script>renderTable("Ultros (Lete)");</script>
-		<hr />
-		<p>Terra/Edgar/Banon first, no bosses; next Locke</p>
+		<hr class="break" />
+		<div class="chars"><script>partyGroup("locked", ["Terra", "Edgar", "Banon"]);</script></div>no bosses
+		<hr class="break" />
+		<div class="chars"><script>partyGroup("locked", ["Locke"]);</script></div>
 		<script>renderTable("TunnelArmr");</script>
-		<hr />
+		<hr class="break" />
+		<p><span class="chars"><script>partyGroup("locked", ["Sabin"]);</script></span></p>
 		<script>renderTable("GhostTrain");</script>
-		<hr />
+		<hr class="battle" />
 		<script>renderTable("Rizopas");</script>
-		<hr />
-		<h1>Break</h1>
-		<p>
-			Edgar, Terra<br />
-			Locke, Celes, Gau<br />
-			Cyan, Sabin
-		</p>
+		<hr class="break" />
+			<div class="chars a">
+				<script>
+					partyGroup("party", ["Edgar","Terra"]);
+				</script>
+			</div>
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Locke","Celes","Gau"]);
+				</script>
+			</div>
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Cyan","Sabin"]);
+				</script>
+			</div>
 		<script>renderTable("Rider");</script>
-		<hr />
+		<hr class="battle" />
 		<script>renderTable("Kefka");</script>
-		<hr />
-		<h1>Break</h1>
+		<hr class="break" />
 		<p>
-			Choice! +Locke, +Edgar, +Sabin, Gau (or Cyan/Sabin)<br />
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Locke", "Edgar", "Sabin"]);
+					partyGroup("", ["Gau"]);
+					partyGroup("leftover", ["Cyan", "Celes"]);
+				</script>
+			</div><br />
 			New rages?<br />
 			Zozo clock &ndash; 6:10
 		</p>
@@ -138,7 +229,7 @@
 			Choice! +Terra, rest above<br />
 			Esper Cave, lots of invisible treasures on "plaza"<br />
 			Choice! Any above
-			<li>
+			<ul>
 				<li>To our homelands</li>
 				<li>Leave him in jail</li>
 				<li>That was inexcusable</li>
@@ -149,7 +240,7 @@
 				<li>[your first question]</li>
 				<li>That your war is truly over</li>
 				<li>Yes</li>
-			</li>
+			</ul>
 			burning house &ndash; equip anti-Fire gear; confuse (Stray/Stone) Balloons to learn Exploder<br />
 		</p>
 		<script>renderTable("FlameEater");</script>
@@ -164,7 +255,7 @@
 			Choice! Strago, Mog, +1 (room for Shadow)<br />
 			Floating Continent:
 		</p>
-		<script>renderTable("Ultros (Chupon)");</script>
+		<script>renderTable("Chupon");</script>
 		<script>renderTable("Ultros (Sky)");</script>
 		<hr />
 		<script>renderTable("Laser Gun");</script>
