@@ -21,7 +21,6 @@ var bosses = {
 		},
 		"notes" : [
 			"Three parts: Air Force, Laser Gun, Missile Bay",
-			"Steal Debilitator from Missile Bay",
 			"Killing Laser Gun spawns Speck, which uses Runic",
 			"Summon Zoneseek for Shell, Kirin to counter Sap",
 		],
@@ -1406,7 +1405,9 @@ var bosses = {
 			"resist" : [],
 			"absorb" : []
 		},
-		"notes" : [],
+		"notes" : [
+			"Steal Debilitator from Missile Bay"
+		],
 		"wanted" : []
 	},
 	"Moe" : {
