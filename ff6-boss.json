@@ -175,7 +175,8 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Fire"
+				"Fire",
+				"Pearl"
 			],
 			"vuln" : [
 				"Blind",
@@ -183,8 +184,7 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Pearl",
-				"Water"
+				"Lightning"
 			]
 		},
 		"notes" : [

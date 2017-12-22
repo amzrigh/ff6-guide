@@ -102,7 +102,7 @@ function writeAffinityGroup(ag) {
 	var tableContent = "";
 	if(ag.length > 0) {
 		tableContent = "<table class=\"symbols\">";
-		for (var i = 0; i < ag.length; i++) {
+		for(var i = 0; i < ag.length; i++) {
 			if(i % 6 == 0) {
 				if(i > 0) {
 					tableContent += "</tr>";

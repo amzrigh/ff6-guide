@@ -17,6 +17,9 @@
 			span.ref {
 				font-style: italic;
 			}
+			.boss {
+				width: 701px;
+			}
 			.boss th {
 				background-color: #ddd;
 				padding: 1px 4px;
@@ -31,15 +34,15 @@
 			}
 			.colname {
 				width: 160px;
+				height: 98px;
 			}
 			.colname table {
 				text-align: center;
-				vertical-align: middle;
 				border-spacing: 0px 1px;
 				height: 100%;
 			}
 			.colname td {
-				overflow: auto;
+				vertical-align: middle;
 			}
 			.colstats table {
 				border-spacing: 1px;
@@ -90,9 +93,10 @@
 				text-align: left;
 			}
 			.boss ul {
+				margin: 0;
 				list-style-type: none;
-				padding-left: 20px;
-				indent: -10px;
+				padding-left: 30px;
+				text-indent: -15px;
 			}
 			.chars {
 				display: inline-block;
@@ -155,7 +159,7 @@
 		<hr class="enemy" />
 		<script>renderTable("Vargas");</script>
 		<hr class="battle" />
-		<h3>Lete River: LEFT</h3>
+		<h3>Lete River: Up, Left</h3>
 		<script>renderTable("Ultros (Lete)");</script>
 		<hr class="break" />
 		<div class="chars"><script>partyGroup("locked", ["Terra", "Edgar", "Banon"]);</script></div>no bosses
@@ -167,6 +171,10 @@
 		<script>renderTable("GhostTrain");</script>
 		<hr class="battle" />
 		<script>renderTable("Rizopas");</script>
+		<hr class="battle" />
+		<p>
+			Serpent Trench&mdash;take right path for items
+		</p>
 		<hr class="break" />
 		<p>
 			<div class="chars">
@@ -216,9 +224,14 @@
 		</p>
 		<script>renderTable("Ultros (Opera)");</script>
 		<hr class="break" />
-		<h1>Break</h1>
 		<p>
-			Choice! [Locke, Celes] + (Edgar, Sabin, Gau, Cyan)
+			<div class="chars">
+				<script>
+					partyGroup("locked", ["Locke", "Celes"]);
+					partyGroup("party", ["Gau"]);
+					partyGroup("", ["Edgar", "Sabin", "Cyan"]);
+				</script>
+			</div>
 		</p>
 		<script>renderTable("Shiva");</script>
 		<hr class="enemy" />
@@ -236,16 +249,31 @@
 		<hr class="enemy" />
 		<script>renderTable("Crane (Right)");</script>
 		<hr class="break" />
-		<h1>Break</h1>
 		<p>
-			Choice! (Terra, Locke, Edgar, Sabin, Cyan, Gau, Setzer)<br />
+			<div class="chars">
+				<script>
+					partyGroup("", ["Terra", "Edgar", "Sabin", "Cyan", "Gau", "Setzer"]);
+				</script>
+			</div><br />
 			Get Mog<br />
 			Jidoor auction: 60k gil for magicite &amp; relics<br />
 			Collect Mog's dances<br />
 			Try for Rages<br />
-			Choice! +Terra, rest above<br />
+			Mobliz/Maranda mail quest<br />
+			Loot Doma<br />
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Terra"]);
+					partyGroup("", ["Edgar", "Sabin", "Cyan", "Gau", "Setzer"]);
+					partyGroup("leftover", ["Mog"]);
+				</script>
+			</div><br />
 			Esper Cave, lots of invisible treasures on "plaza"<br />
-			Choice! Any above
+			<div class="chars">
+				<script>
+					partyGroup("", ["Terra", "Edgar", "Sabin", "Cyan", "Gau", "Setzer", "Mog"]);
+				</script>
+			</div>
 			<ul>
 				<li>To our homelands</li>
 				<li>Leave him in jail</li>
@@ -258,19 +286,31 @@
 				<li>That your war is truly over</li>
 				<li>Yes</li>
 			</ul>
-			burning house &ndash; equip anti-Fire gear; confuse (Stray/Stone) Balloons to learn Exploder<br />
+			Burning house &ndash; equip anti-Fire gear; confuse (Stray/Stone) Balloons to learn Exploder<br />
 		</p>
 		<script>renderTable("FlameEater");</script>
 		<hr class="battle" />
 		<script>renderTable("Ultros (Cave)");</script>
 		<hr class="break" />
-		<h1>Break</h1>
 		<p>
-			Choice! Any
-			Lores &amp; Rages; loot Doma<br />
-			Mobliz/Maranda mail quest<br />
-			Choice! Strago, Mog, +1 (room for Shadow)<br />
-			Floating Continent:
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Strago", "Gau"]);
+					partyGroup("", ["Terra", "Edgar", "Sabin", "Cyan", "Gau", "Setzer", "Mog"]);
+				</script>
+			</div><br />
+			Lores &amp; Rages<br />
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Locke", "Gau", "Strago"]);
+					partyGroup("leftover", ["Edgar", "Sabin", "Cyan", "Setzer", "Mog"]);
+				</script>
+				+
+				<script>
+					partyGroup("", ["Shadow"]);
+				</script>
+				joins on Floating Continent
+			</div>
 		</p>
 		<script>renderTable("Chupon");</script>
 		<hr class="enemy" />
@@ -290,10 +330,10 @@
 		<hr class="battle" />
 		<script>renderTable("Nerapa");</script>
 		<hr class="break" />
-		<p>Mobliz:</p>
+		<h3>Mobliz</h3>
 		<script>renderTable("Phunbaba");</script>
 		<hr class="break" />
-		<p>Figaro:</p>
+		<h3>Figaro</h3>
 		<script>renderTable("Tentacle (1)");</script>
 		<hr class="enemy" />
 		<script>renderTable("Tentacle (2)");</script>
@@ -302,44 +342,75 @@
 		<hr class="enemy" />
 		<script>renderTable("Tentacle (4)");</script>
 		<hr class="break" />
-		<p>Kohlingen:</p>
+		<h3>Kohlingen</h3>
 		<script>renderTable("Presenter");</script>
 		<hr class="battle" />
 		<script>renderTable("Dullahan");</script>
 		<hr class="break" />
 		<p>
-			Go get Bum Rush, Palidor<br />
-			Choice! (Celes, Sabin, Edgar, Setzer) pick 3<br />
-			The Veldt:
+			Go get Bum Rush, Palidor
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Sabin", "Celes", "Edgar"]);
+					partyGroup("leftover", ["Setzer"]);
+				</script>
+				+
+				<script>
+					partyGroup("", ["Gau"]);
+				</script>
+				joins
+			</div><br />
 		</p>
+		<h3>The Veldt</h3>
 		<script>renderTable("SrBehemoth (1)");</script>
 		<hr class="enemy" />
 		<script>renderTable("SrBehemoth (2)");</script>
 		<hr class="break" />
-		<p>
-			Choice! (Celes, Sabin, Edgar, Setzer, Gau)<br />
-			Jidoor:
-		</p>
+		<div class="chars">
+			<script>
+				partyGroup("party", ["Sabin", "Gau", "Edgar"]);
+				partyGroup("", ["Celes", "Setzer"]);
+			</script>
+		</div>
+		<h3>Jidoor</h3>
 		<script>renderTable("Chadarnook (Goddess)");</script>
 		<hr class="enemy" />
 		<script>renderTable("Chadarnook (Phantasm)");</script>
 		<hr class="break" />
-		<p>
-			Choice! (Celes, Sabin, Edgar, Setzer, Relm, Strago, Gau)<br />
-			Mobliz:
-		</p>
+		<div class="chars">
+			<script>
+				partyGroup("party", ["Sabin", "Gau", "Edgar"]);
+				partyGroup("", ["Celes", "Setzer", "Relm", "Strago"]);
+			</script>
+		</div>
+		<h3>Mobliz</h3>
 		<script>renderTable("Phunbaba (2)");</script>
 		<hr class="break" />
 		<p>
-			Choice! (Celes, Sabin, Edgar, Setzer, Relm, Strago, Gau, Terra)<br />
-			Phoenix Cave:
+			<div class="chars">
+				<div>A</div>
+				<script>
+					partyGroup("party", ["Gau","Sabin","Celes","Relm"]);
+				</script>
+			</div>
+			<div class="chars">
+				<div>B</div>
+				<script>
+					partyGroup("party", ["Strago","Edgar","Terra","Setzer"]);
+				</script>
+			</div>
 		</p>
+		<h3>Phoenix Cave</h3>
 		<script>renderTable("Red Dragon");</script>
 		<hr class="break" />
-		<p>
-			Choice! Locke + (Celes, Sabin, Edgar, Setzer, Relm, Strago, Gau, Terra)<br />
-			Narshe:
-		</p>
+		<div class="chars">
+			<script>
+				partyGroup("party", ["Locke", "Mog"]);
+				partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Gau", "Setzer", "Strago", "Relm"]);
+			</script>
+		</div><br />
+		(Get in and recruit Mog first; add him to your party before engaging bosses)
+		<h3>Narshe</h3>
 		<script>renderTable("Ice Dragon");</script>
 		<hr class="battle" />
 		<script>renderTable("Tritoch");</script>
@@ -348,32 +419,51 @@
 		<hr class="battle" />
 		<script>renderTable("Umaro");</script>
 		<hr class="break" />
-		<p>
-			Choice! (Celes, Sabin, Edgar, Setzer, Relm, Strago, Gau, Mog, Umaro, Terra, Locke)<br />
-			Zozo:
-		</p>
+		<div class="chars">
+			<script>
+				partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
+			</script>
+		</div>
+		<h3>Zozo</h3>
 		<script>renderTable("Storm Drgn");</script>
 		<hr class="break" />
 		<p>
-			Go to Colosseum, wager Striker to get Shadow<br />
-			Choice! (Celes, Sabin, Edgar, Setzer, Relm, Strago, Gau, Mog, Umaro, Terra, Locke, Cyan, Shadow)<br />
-			Opera House:
+			Colosseum—wager Striker to get Shadow<br />
 		</p>
+		<div class="chars">
+			<script>
+				partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
+			</script>
+		</div>
+		<h3>Opera House</h3>
 		<script>renderTable("Dirt Drgn");</script>
 		<hr class="break" />
-		<p>
-			Choice! Locke + (Celes, Sabin, Edgar, Setzer, Relm, Strago, Gau, Mog, Umaro, Terra, Cyan, Shadow)<br />
-			Tower of Fanatics:
-		</p>
+		<div class="chars">
+			<script>
+				partyGroup("party", ["Locke", "Umaro"]);
+				partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Strago", "Relm"]);
+			</script>
+		</div>
+		<h3>Tower of Fanatics</h3>
 		<script>renderTable("White Drgn");</script>
 		<hr class="battle" />
 		<script>renderTable("MagiMaster");</script>
 		<hr class="break" />
 		<p>
+			<div class="chars">
+				<script>
+					partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
+				</script>
+			</div><br />
 			Triangle Island &ndash; get Gogo<br />
-			Choice! Locke + (Celes, Sabin, Edgar, Setzer, Relm, Strago, Gau, Mog, Umaro, Terra, Cyan, Shadow, Gogo)<br />
-			Thamasa:
+			<div class="chars">
+				<script>
+					partyGroup("", ["Locke", "Strago"])
+					partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Relm", "Umaro", "Gogo"]);
+				</script>
+			</div>
 		</p>
+		<h3>Thamasa</h3>
 		<script>renderTable("Hidonite (1)");</script>
 		<hr class="enemy" />
 		<script>renderTable("Hidonite (2)");</script>
@@ -384,10 +474,13 @@
 		<hr class="enemy" />
 		<script>renderTable("Hidon");</script>
 		<hr class="break" />
-		<p>
-			Choice! Locke, Strago + (Celes, Sabin, Edgar, Setzer, Relm, Gau, Mog, Umaro, Terra, Cyan, Shadow, Gogo)<br />
-			Doma:
-		</p>
+		<div class="chars">
+			<script>
+				partyGroup("party", ["Locke", "Strago", "Cyan"])
+				partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Gau", "Setzer", "Mog", "Relm", "Umaro", "Gogo"]);
+			</script>
+		</div>
+		<h3>Doma</h3>
 		<script>renderTable("Larry");</script>
 		<hr class="enemy" />
 		<script>renderTable("Moe");</script>
