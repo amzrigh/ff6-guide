@@ -7,7 +7,7 @@
 			body {
 				font-size: 75% !important;
 			}
-			p, h3 {
+			p, h3, h5 {
 				margin: 2px 0px;
 			}
 			.battle-grp {
@@ -210,9 +210,7 @@
 		<hr class="battle" />
 		<script>renderTable("Rizopas");</script>
 		<hr class="battle" />
-		<p>
-			Serpent Trench&mdash;take right path for items
-		</p>
+		<h3>Serpent Trench&mdash;take right path for items</h3>
 		<hr class="break" />
 		<div class="multi-party">
 			<div class="chars">
@@ -587,14 +585,16 @@
 		<hr class="battle" />
 		<script>renderTable("Blue Drgn");</script>
 		<hr class="break" />
-		<div class="chars">
-			<script>
-				partyGroup("party", ["Gau"])
-				partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Setzer", "Mog", "Strago", "Relm", "Umaro", "Gogo"]);
-			</script>
+		<div class="battle-grp">
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Gau"])
+					partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Setzer", "Mog", "Strago", "Relm", "Umaro", "Gogo"]);
+				</script>
+			</div>
+			<h3>Skies</h3>
+			<script>renderTable("Doom Gaze");</script>
 		</div>
-		<h3>Skies</h3>
-		<script>renderTable("Doom Gaze");</script>
 		<hr class="break" />
 		<div class="multi-party">
 			<div class="chars">
@@ -636,10 +636,10 @@
 		<hr class="battle" />
 		<script>renderTable("Gold Drgn");</script>
 		<hr class="battle" />
-		<p>
-			Party C:
-		</p>
 		<div class="battle-grp">
+			<p>
+				Party C:
+			</p>
 			<script>renderTable("Striker");</script>
 			<hr class="enemy" />
 			<script>renderTable("Rough");</script>
@@ -649,7 +649,7 @@
 		<hr class="battle" />
 		<script>renderTable("Skull Drgn");</script>
 		<hr />
-		<h5>Phase 2:</h5>
+		<h5>Phase 2</h5>
 		<p>
 			Party A: Take right path
 		</p>
