@@ -15,7 +15,7 @@ var symbols = {
 	"Muddle" : "&#x1f4ab;",
 	"Berserk" : "&#x1f479;",
 	"Mute" : "<span>&#x1f4ac;</span>",
-	"Stop" : "&#xE283;",
+	"Stop" : "<div>&#xE283;</div>",
 	"Slow" : "&#x1f557;",
 	"Undead" : "&#x1f480;",
 };
@@ -34,10 +34,10 @@ function renderTable(monster) {
 		bossTable += "<tr><th class=\"notes\" colspan=\"3\">Notes</th></tr>" +
 			"<tr><td colspan=\"3\">" + writeNotes(boss.notes) + "</td></tr>";
 	}
-	if(boss.wanted.length > 0) {
-		bossTable += "<tr><th class=\"notes\" colspan=\"3\">Wanted</th></tr>" +
-			"<tr><td colspan=\"3\">" + writeNotes(boss.wanted) + "</td></tr>";
-	}
+//	if(boss.wanted.length > 0) {
+//		bossTable += "<tr><th class=\"notes\" colspan=\"3\">Wanted</th></tr>" +
+//			"<tr><td colspan=\"3\">" + writeNotes(boss.wanted) + "</td></tr>";
+//	}
 	bossTable += "</table>";
 	document.write(bossTable);
 }
@@ -139,7 +139,13 @@ function partyGroup(grp, party) {
 }
 
 function drawChar(name) {
-	return "<img src=\"images/char/" + name + ".png\" />";
+	var charimg = "";
+	if(name == "space") {
+		charimg = "<span class=\"party-spacer\"></span>";
+	} else {
+		charimg = "<img src=\"images/char/" + name + ".png\" />";
+	}
+	return charimg;
 }
 
 

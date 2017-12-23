@@ -1,20 +1,29 @@
 <html>
 <head>
 <style>
+* {
+	font-size: 96%;
+}
 .title {
-	page-break-before:always;
 	position:relative;
-	top:10px;
+	top: 5px;
 }
 .title span {
 	border-style: double solid;
 	font-style: bold;
 	align: center;
-	padding: 5px;
+	padding: 3px;
+}
+h3 {
+	clear: both;
 }
 table.rage {
-	text-align:center;
+	float: left;
+	text-align: center;
 	border-spacing: 0px 3px;
+	border: dashed 1px;
+	margin-right: 8px;
+	margin-bottom: 8px;
 }
 table.rage th {
 	border-bottom: solid 2px;
@@ -29,7 +38,7 @@ table.rage td:nth-child(odd):not(:empty) {
 	border-right:solid 1px;
 }
 table.lore {
-	border-spacing:12px 3px;
+	border-spacing: 12px 3px;
 }
 span.ab {
 	font-weight: bold;
@@ -37,47 +46,23 @@ span.ab {
 span.ref {
 	font-style: italic;
 }
-.status { //large unicode characters
-	spacing: 2px;
-}
-.status td {
-	font-size: 24px;
-	width: 32px;
-	height: 32px;
-	max-width: 32px;
-	max-height: 32px;
-	font-family: Segoe UI Symbol;
-	text-align: center;
-	vertical-align: midline;
-	overflow: hidden;
-}
-.status td span {
-	display: inline-block;
-	vertical-align: baseline;
-	border: 1px solid;
-}
 .dance th {
 	text-align: left;
 }
+ul {
+	position: relative;
+	margin: auto;
+	list-style-position: inside;
+	padding-left: 1px;
+}
 </style>
+<!-- style="page-break-before:always;"-->
 </head>
 <body>
 <p class="title">
 <span>GAU</span>
 </p>
 <h3>A. WORLD OF BALANCE: From Narshe to the Phantom Forest</h3>
-<p>
-There's lots time before your first visit to the Veldt, but you should be
-playing with some very basic information in mind. First: the fewer unecessary
-battles you fight, the easier it will be for you to get the Rages you want
-faster. Fight the monsters you want, and try to avoid groupings of monsters you 
-don't want. Second: running away counts. To see a monster grouping on the 
-Veldt, you only have to walk away alive and save your game; you don't have to
-kill 'em. Third: when the game splits into three scenarios, CHOOSE SABIN'S 
-SCENARIO LAST, to get Rages from the other two scenarios.
-</p><p>
-Now, let's look at the cream of the crop for the first part of the game:
-</p>
 <table class="rage">
 <tr><th colspan="2">Great Rages</th><th colspan="2">Awesome Rages</th><th colspan="2">Gau's Default Rages</th></tr>
 <tr><td>Areneid</td><td>Numb</td><td>Marshal</td><td>Wind Slash</td><td>Lobo</td><td>Tusk</td></tr>
@@ -133,15 +118,12 @@ Easily Missed Monsters:
 </li>
 </ul>
 </p>
-
-<h3 style="page-break-before:always;">B. WORLD OF BALANCE: From the Serpent Trench to the Magitek Research Facility</h3>
+<h3>B. WORLD OF BALANCE: From the Serpent Trench to the Magitek Research Facility</h3>
 <p>
 If you're willing to walk a long way, you can teach Gau any Rage up to Zozo monsters BEFORE going to
 the Magitek Research Facility. You can get 
 <span class="ab">Anguiform|Aqua Rake</span> and <span class="ab">Aspik|Giga Volt</span>, which together make the Research 
 Facility a cakewalk.
-</p><p>
-Which monsters to keep an eye out for? Just a few gems...
 </p>
 <table class="rage">
 <tr><th colspan="2">Great Rages</th><th colspan="2">Awesome Rages</th><th colspan="2">Upgrades</th></tr>
@@ -173,7 +155,6 @@ For some real shenanigans, have a character learn <span class="ref">Float</span>
 </li>
 </ul>
 </p>
-
 <h3>C. WORLD OF BALANCE: From the Sealed Gate to the Floating Continent</h3>
 <p>
 This section is relatively uninteresting. Here are the good ones:
@@ -282,10 +263,9 @@ Which of Gau's offensive Rages is best? Depends on the context.
 	</ol>
 </li>
 </ul>
-</p>
-<p class="title">
+<p class="title" style="page-break-before:always;">
 <span>STRAGO</span>
-<p>
+</p>
 
 <h3>A. WORLD OF BALANCE</h3>
 <p>
@@ -326,10 +306,10 @@ Lores to Collect:
 </table>
 </p>
 <p>
-Most of these Lores are easy. After you use Relm to rescue Strago, <span class="ref">Sketch</span> an 
-<span class="ab">Reach Frog</span> or two for <span class="ab">Rippler</span>. Fly to Kohlingen and fight a <span class="ab">Harpiai</span>
-<span class="ab">EarthGuard</span> for <span class="ab">Big Guard</span>. Then zip over to the land outside Maranda and fight a 
-for <span class="ab">Aero</span>, then run into Daryl's Tomb to learn <span class="ab">Sour Mouth</span> from a <span class="ab">Mad Oscar</span>.
+Most of these Lores are easy. After you use Relm to rescue Strago, <span class="ref">Sketch</span> a 
+<span class="ab">Reach Frog</span> or two for <span class="ab">Rippler</span>. Fly to Kohlingen and fight an
+<span class="ab">EarthGuard</span> for <span class="ab">Big Guard</span>. Then zip over to the land outside Maranda and fight a
+<span class="ab">Harpiai</span> for <span class="ab">Aero</span>, then run into Daryl's Tomb to learn <span class="ab">Sour Mouth</span> from a <span class="ab">Mad Oscar</span>.
 Burrow down to the Ancient Castle, where an <span class="ab">Enuo</span> will use <span class="ab">CleanSweep</span> when you kill its buddies.
 </p>
 <p>
@@ -473,39 +453,3 @@ statue.
 	</tr>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

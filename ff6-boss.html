@@ -1,29 +1,28 @@
 <html>
 	<head>
 		<style>
-			.title {
-				position:relative;
-				top:10px;
+			* {
+				font-size: inherit;
 			}
-			.title span {
-				border-style: double solid;
-				font-style: bold;
-				align: center;
-				padding: 5px;
+			body {
+				font-size: 75% !important;
 			}
-			span.ab {
-				font-weight: bold;
+			p, h3 {
+				margin: 6px 0px;
 			}
-			span.ref {
-				font-style: italic;
+			.battle-grp {
+				page-break-inside: avoid;
 			}
 			.boss {
 				width: 701px;
+				page-break-inside: avoid;
+				clear: both;
 			}
 			.boss th {
 				background-color: #ddd;
-				padding: 1px 4px;
-				height: 20px;
+				padding: 0px 4px;
+				height: 16px;
+				vertical-align: middle;
 			}
 			.boss td {
 				vertical-align: top;
@@ -34,7 +33,7 @@
 			}
 			.colname {
 				width: 160px;
-				height: 98px;
+				height: 80px;
 			}
 			.colname table {
 				text-align: center;
@@ -71,38 +70,51 @@
 			}
 			.affin-grp td {
 				text-align: center;
-				height: 29px;
+				height: 20px;
 			}
 			table.symbols {
 				width: initial;
 				margin: auto;
+				margin-top: 0px;
+				margin-bottom: 0px;
+				height: inherit;
 			}
 			.symbols td {
-				font-family: Segoe UI Symbol;
+				font-family: Segoe UI Symbol !important;
 				vertical-align: middle;
-				width: 25px;
-				max-width: 25px;
-				height: 25px;
-				max-height: 25px;
-				padding: 0px 0px;
+				width: 20px;
+				max-width: 20px;
+				height: 20px;
+				max-height: 20px;
+				padding: 0px;
+				margin: 0px;
 			}
 			.symbols td span {
 				font-family: Segoe UI Image;
 			}
+			.symbols td div {
+				position: relative;
+				top: -2px;
+			}
 			.notes {
 				text-align: left;
 			}
+			ul {
+				margin: 3px;
+			}
 			.boss ul {
-				margin: 0;
 				list-style-type: none;
 				padding-left: 30px;
 				text-indent: -15px;
+				margin: 0px;
 			}
 			.chars {
+				page-break-inside: avoid;
 				display: inline-block;
 				height: 28px;
-				padding: 5px;
+				padding: 0px;
 				vertical-align: middle;
+				margin: 2px;
 			}
 			.chars img {
 				padding: 2px 4px;
@@ -113,6 +125,7 @@
 				vertical-align: inherit;
 			}
 			.chars div {
+				margin: 0px;
 				font-size: 10px;
 				text-align: center;
 			}
@@ -130,6 +143,14 @@
 			}
 			.party-spacer {
 				width: 30px;
+			}
+			.multi-party {
+				position: relative;
+				margin-bottom: 12px;
+			}
+			hr {
+				page-break-inside: avoid;
+				margin: 2px;
 			}
 			hr.break {
 				border: 4px double;
@@ -155,20 +176,36 @@
 		<hr class="battle" />
 		<script>renderTable("Marshal");</script>
 		<hr class="battle" />
-		<script>renderTable("Ipooh");</script>
-		<hr class="enemy" />
-		<script>renderTable("Vargas");</script>
+		<div class="battle-grp">
+			<script>renderTable("Ipooh");</script>
+			<hr class="enemy" />
+			<script>renderTable("Vargas");</script>
+		</div>
 		<hr class="battle" />
 		<h3>Lete River: Up, Left</h3>
 		<script>renderTable("Ultros (Lete)");</script>
 		<hr class="break" />
-		<div class="chars"><script>partyGroup("locked", ["Terra", "Edgar", "Banon"]);</script></div>no bosses
+		<div class="chars">
+			<script>
+				partyGroup("locked", ["Terra", "Edgar", "Banon"]);
+			</script>
+		</div>no bosses
 		<hr class="break" />
-		<div class="chars"><script>partyGroup("locked", ["Locke"]);</script></div>
+		<div class="chars">
+			<script>
+				partyGroup("locked", ["Locke"]);
+			</script>
+		</div>
 		<script>renderTable("TunnelArmr");</script>
 		<hr class="break" />
-		<div class="chars"><script>partyGroup("locked", ["Sabin"]);</script></div>
-		<script>renderTable("GhostTrain");</script>
+		<div class="battle-grp">
+			<div class="chars">
+				<script>
+					partyGroup("locked", ["Sabin"]);
+				</script>
+			</div>
+			<script>renderTable("GhostTrain");</script>
+		</div>
 		<hr class="battle" />
 		<script>renderTable("Rizopas");</script>
 		<hr class="battle" />
@@ -176,11 +213,11 @@
 			Serpent Trench&mdash;take right path for items
 		</p>
 		<hr class="break" />
-		<p>
+		<div class="multi-party">
 			<div class="chars">
 				<div>A</div>
 				<script>
-					partyGroup("party", ["Edgar","Terra"]);
+					partyGroup("party", ["Terra","Edgar"]);
 				</script>
 			</div>
 			<div class="chars">
@@ -192,28 +229,28 @@
 			<div class="chars">
 				<div>C</div>
 				<script>
-					partyGroup("party", ["Cyan","Sabin"]);
+					partyGroup("party", ["Sabin","Cyan"]);
 				</script>
 			</div>
-		</p>
+		</div>
 		<script>renderTable("Rider");</script>
 		<hr class="battle" />
 		<script>renderTable("Kefka");</script>
 		<hr class="break" />
+		<div class="chars">
+			<script>
+				partyGroup("party", ["Locke", "Edgar", "Sabin"]);
+				partyGroup("", ["Gau"]);
+				partyGroup("leftover", ["Celes", "Cyan"]);
+			</script>
+		</div>
 		<p>
-			<div class="chars">
-				<script>
-					partyGroup("party", ["Locke", "Edgar", "Sabin"]);
-					partyGroup("", ["Gau"]);
-					partyGroup("leftover", ["Cyan", "Celes"]);
-				</script>
-			</div><br />
 			New rages?<br />
 			Zozo clock &ndash; 6:10
 		</p>
 		<script>renderTable("Dadaluma");</script>
 		<hr class="break" />
-		<p>
+		<div class="battle-grp">
 			<div class="chars">
 				<script>
 					partyGroup("locked", ["Locke", "Celes"]);
@@ -221,8 +258,8 @@
 					partyGroup("leftover", ["Cyan"])
 				</script>
 			</div>
-		</p>
 		<script>renderTable("Ultros (Opera)");</script>
+		</div>
 		<hr class="break" />
 		<p>
 			<div class="chars">
@@ -233,26 +270,32 @@
 				</script>
 			</div>
 		</p>
-		<script>renderTable("Shiva");</script>
-		<hr class="enemy" />
-		<script>renderTable("Ifrit");</script>
+		<div class="battle-grp">
+			<script>renderTable("Shiva");</script>
+			<hr class="enemy" />
+			<script>renderTable("Ifrit");</script>
+		</div>
 		<hr class="battle" />
 		<script>renderTable("Number 024");</script>
 		<hr class="battle" />
-		<script>renderTable("RightBlade");</script>
-		<hr class="enemy" />
-		<script>renderTable("Left Blade");</script>
-		<hr class="enemy" />
-		<script>renderTable("Number 128");</script>
+		<div class="battle-grp">
+			<script>renderTable("RightBlade");</script>
+			<hr class="enemy" />
+			<script>renderTable("Left Blade");</script>
+			<hr class="enemy" />
+			<script>renderTable("Number 128");</script>
+		</div>
 		<hr class="battle" />
-		<script>renderTable("Crane (Left)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Crane (Right)");</script>
+		<div class="battle-grp">
+			<script>renderTable("Crane (Left)");</script>
+			<hr class="enemy" />
+			<script>renderTable("Crane (Right)");</script>
+		</div>
 		<hr class="break" />
 		<p>
 			<div class="chars">
 				<script>
-					partyGroup("", ["Terra", "Edgar", "Sabin", "Cyan", "Gau", "Setzer"]);
+					partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Cyan", "Gau", "Setzer"]);
 				</script>
 			</div><br />
 			Get Mog<br />
@@ -264,28 +307,30 @@
 			<div class="chars">
 				<script>
 					partyGroup("party", ["Terra"]);
-					partyGroup("", ["Edgar", "Sabin", "Cyan", "Gau", "Setzer"]);
+					partyGroup("", ["Locke", "Edgar", "Sabin", "Cyan", "Gau", "Setzer"]);
 					partyGroup("leftover", ["Mog"]);
 				</script>
 			</div><br />
 			Esper Cave, lots of invisible treasures on "plaza"<br />
-			<div class="chars">
-				<script>
-					partyGroup("", ["Terra", "Edgar", "Sabin", "Cyan", "Gau", "Setzer", "Mog"]);
-				</script>
+			<div class="battle-grp">
+				<div class="chars">
+					<script>
+						partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Cyan", "Gau", "Setzer", "Mog"]);
+					</script>
+				</div>
+				<ul>
+					<li>To our homelands</li>
+					<li>Leave him in jail</li>
+					<li>That was inexcusable</li>
+					<li>Celes is one of us</li>
+					<li>[any]</li>
+					<li>Still have a few things to ask (NO REPEATS)</li>
+					<li>They have gone a bit too far</li>
+					<li>[your first question]</li>
+					<li>That your war is truly over</li>
+					<li>Yes</li>
+				</ul>
 			</div>
-			<ul>
-				<li>To our homelands</li>
-				<li>Leave him in jail</li>
-				<li>That was inexcusable</li>
-				<li>Celes is one of us</li>
-				<li>[any]</li>
-				<li>Still have a few things to ask (NO REPEATS)</li>
-				<li>They have gone a bit too far</li>
-				<li>[your first question]</li>
-				<li>That your war is truly over</li>
-				<li>Yes</li>
-			</ul>
 			Burning house &ndash; equip anti-Fire gear; confuse (Stray/Stone) Balloons to learn Exploder<br />
 		</p>
 		<script>renderTable("FlameEater");</script>
@@ -295,7 +340,7 @@
 		<p>
 			<div class="chars">
 				<script>
-					partyGroup("party", ["Strago", "Gau"]);
+					partyGroup("party", ["Gau", "Strago"]);
 					partyGroup("", ["Terra", "Edgar", "Sabin", "Cyan", "Gau", "Setzer", "Mog"]);
 				</script>
 			</div><br />
@@ -312,17 +357,21 @@
 				joins on Floating Continent
 			</div>
 		</p>
-		<script>renderTable("Chupon");</script>
-		<hr class="enemy" />
-		<script>renderTable("Ultros (Sky)");</script>
+		<div class="battle-grp">
+			<script>renderTable("Chupon");</script>
+			<hr class="enemy" />
+			<script>renderTable("Ultros (Sky)");</script>
+		</div>
 		<hr class="battle" />
-		<script>renderTable("Laser Gun");</script>
-		<hr class="enemy" />
-		<script>renderTable("MissileBay");</script>
-		<hr class="enemy" />
-		<script>renderTable("Speck");</script>
-		<hr class="enemy" />
-		<script>renderTable("Air Force");</script>
+		<div class="battle-grp">
+			<script>renderTable("Laser Gun");</script>
+			<hr class="enemy" />
+			<script>renderTable("MissileBay");</script>
+			<hr class="enemy" />
+			<script>renderTable("Speck");</script>
+			<hr class="enemy" />
+			<script>renderTable("Air Force");</script>
+		</div>
 		<hr class="battle" />
 		<script>renderTable("Gigantos");</script>
 		<hr class="battle" />
@@ -333,14 +382,18 @@
 		<h3>Mobliz</h3>
 		<script>renderTable("Phunbaba");</script>
 		<hr class="break" />
-		<h3>Figaro</h3>
-		<script>renderTable("Tentacle (1)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Tentacle (2)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Tentacle (3)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Tentacle (4)");</script>
+		<div class="battle-grp">
+			<h3>Figaro</h3>
+			<div class="battle-grp">
+				<script>renderTable("Tentacle (1)");</script>
+				<hr class="enemy" />
+				<script>renderTable("Tentacle (2)");</script>
+				<hr class="enemy" />
+				<script>renderTable("Tentacle (3)");</script>
+				<hr class="enemy" />
+				<script>renderTable("Tentacle (4)");</script>
+			</div>
+		</div>
 		<hr class="break" />
 		<h3>Kohlingen</h3>
 		<script>renderTable("Presenter");</script>
@@ -349,9 +402,11 @@
 		<hr class="break" />
 		<p>
 			Go get Bum Rush, Palidor
+		</p>
+		<div class="battle-grp">
 			<div class="chars">
 				<script>
-					partyGroup("party", ["Sabin", "Celes", "Edgar"]);
+					partyGroup("party", ["Edgar", "Sabin", "Celes"]);
 					partyGroup("leftover", ["Setzer"]);
 				</script>
 				+
@@ -359,47 +414,53 @@
 					partyGroup("", ["Gau"]);
 				</script>
 				joins
-			</div><br />
-		</p>
-		<h3>The Veldt</h3>
-		<script>renderTable("SrBehemoth (1)");</script>
-		<hr class="enemy" />
-		<script>renderTable("SrBehemoth (2)");</script>
+			</div>
+			<h3>The Veldt</h3>
+			<div class="battle-grp">
+				<script>renderTable("SrBehemoth (1)");</script>
+				<hr class="enemy" />
+				<script>renderTable("SrBehemoth (2)");</script>
+			</div>
+		</div>
 		<hr class="break" />
 		<div class="chars">
 			<script>
-				partyGroup("party", ["Sabin", "Gau", "Edgar"]);
+				partyGroup("party", ["Edgar", "Sabin", "Gau"]);
 				partyGroup("", ["Celes", "Setzer"]);
 			</script>
 		</div>
 		<h3>Jidoor</h3>
-		<script>renderTable("Chadarnook (Goddess)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Chadarnook (Phantasm)");</script>
-		<hr class="break" />
-		<div class="chars">
-			<script>
-				partyGroup("party", ["Sabin", "Gau", "Edgar"]);
-				partyGroup("", ["Celes", "Setzer", "Relm", "Strago"]);
-			</script>
+		<div class="battle-grp">
+			<script>renderTable("Chadarnook (Goddess)");</script>
+			<hr class="enemy" />
+			<script>renderTable("Chadarnook (Phantasm)");</script>
 		</div>
-		<h3>Mobliz</h3>
-		<script>renderTable("Phunbaba (2)");</script>
 		<hr class="break" />
-		<p>
+		<div class="battle-grp">
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Edgar", "Sabin", "Gau"]);
+					partyGroup("", ["Celes", "Setzer", "Strago", "Relm"]);
+				</script>
+			</div>
+			<h3>Mobliz</h3>
+			<script>renderTable("Phunbaba (2)");</script>
+		</div>
+		<hr class="break" />
+		<div class="multi-party">
 			<div class="chars">
 				<div>A</div>
 				<script>
-					partyGroup("party", ["Gau","Sabin","Celes","Relm"]);
+					partyGroup("party", ["Sabin","Celes","Gau","Setzer"]);
 				</script>
 			</div>
 			<div class="chars">
 				<div>B</div>
 				<script>
-					partyGroup("party", ["Strago","Edgar","Terra","Setzer"]);
+					partyGroup("party", ["Terra","Edgar","Strago","Relm"]);
 				</script>
 			</div>
-		</p>
+		</div>
 		<h3>Phoenix Cave</h3>
 		<script>renderTable("Red Dragon");</script>
 		<hr class="break" />
@@ -419,155 +480,218 @@
 		<hr class="battle" />
 		<script>renderTable("Umaro");</script>
 		<hr class="break" />
-		<div class="chars">
-			<script>
-				partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
-			</script>
+		<div class="battle-grp">
+			<div class="chars">
+				<script>
+					partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
+				</script>
+			</div>
+			<h3>Zozo</h3>
+			<script>renderTable("Storm Drgn");</script>
 		</div>
-		<h3>Zozo</h3>
-		<script>renderTable("Storm Drgn");</script>
 		<hr class="break" />
 		<p>
-			Colosseum—wager Striker to get Shadow<br />
+			Colosseum—wager Striker to get Shadow
 		</p>
 		<div class="chars">
 			<script>
-				partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
+				partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow",  "Cyan", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
 			</script>
 		</div>
 		<h3>Opera House</h3>
 		<script>renderTable("Dirt Drgn");</script>
 		<hr class="break" />
-		<div class="chars">
-			<script>
-				partyGroup("party", ["Locke", "Umaro"]);
-				partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Strago", "Relm"]);
-			</script>
+		<div class="battle-grp">
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Locke", "Umaro"]);
+					partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Strago", "Relm"]);
+				</script>
+			</div>
+			<h3>Tower of Fanatics</h3>
+			<script>renderTable("White Drgn");</script>
 		</div>
-		<h3>Tower of Fanatics</h3>
-		<script>renderTable("White Drgn");</script>
 		<hr class="battle" />
 		<script>renderTable("MagiMaster");</script>
 		<hr class="break" />
+		<div class="chars">
+			<script>
+				partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
+			</script>
+		</div>
 		<p>
+			Triangle Island &ndash; get Gogo
+		</p>
+		<div class="battle-grp">
 			<div class="chars">
 				<script>
-					partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Strago", "Relm", "Umaro"]);
-				</script>
-			</div><br />
-			Triangle Island &ndash; get Gogo<br />
-			<div class="chars">
-				<script>
-					partyGroup("", ["Locke", "Strago"])
-					partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Relm", "Umaro", "Gogo"]);
+					partyGroup("party", ["Locke", "Strago"]);
+					partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Relm", "Gogo"]);
+					partyGroup("leftover", ["Umaro"]);
 				</script>
 			</div>
-		</p>
-		<h3>Thamasa</h3>
-		<script>renderTable("Hidonite (1)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Hidonite (2)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Hidonite (3)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Hidonite (4)");</script>
-		<hr class="enemy" />
-		<script>renderTable("Hidon");</script>
+			<h3>Thamasa</h3>
+			<div class="battle-grp">
+				<script>renderTable("Hidonite (1)");</script>
+				<hr class="enemy" />
+				<script>renderTable("Hidonite (2)");</script>
+				<hr class="enemy" />
+				<script>renderTable("Hidonite (3)");</script>
+				<hr class="enemy" />
+				<script>renderTable("Hidonite (4)");</script>
+				<hr class="enemy" />
+				<script>renderTable("Hidon");</script>
+			</div>
+		</div>
+		<hr class="break" />
+		<div class="battle-grp">
+			<div class="chars">
+				<script>
+					partyGroup("party", ["Locke", "Cyan", "Strago"])
+					partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Gau", "Setzer", "Mog", "Relm", "Umaro", "Gogo"]);
+				</script>
+			</div>
+			<h3>Doma</h3>
+			<div class="battle-grp">
+				<script>renderTable("Larry");</script>
+				<hr class="enemy" />
+				<script>renderTable("Moe");</script>
+				<hr class="enemy" />
+				<script>renderTable("Curley");</script>
+			</div>
+		</div>
+		<hr class="battle" />
+		<div class="battle-grp">
+				<script>renderTable("SoulSaver");</script>
+			<hr class="enemy" />
+			<script>renderTable("Wrexsoul");</script>
+		</div>
 		<hr class="break" />
 		<div class="chars">
 			<script>
-				partyGroup("party", ["Locke", "Strago", "Cyan"])
-				partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Gau", "Setzer", "Mog", "Relm", "Umaro", "Gogo"]);
+				partyGroup("party", ["Locke", "Gau"])
+				partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Setzer", "Mog", "Strago", "Relm", "Umaro", "Gogo"]);
 			</script>
 		</div>
-		<h3>Doma</h3>
-		<script>renderTable("Larry");</script>
-		<hr class="enemy" />
-		<script>renderTable("Moe");</script>
-		<hr class="enemy" />
-		<script>renderTable("Curley");</script>
-		<hr class="battle" />
-		<script>renderTable("SoulSaver");</script>
-		<hr class="enemy" />
-		<script>renderTable("Wrexsoul");</script>
-		<hr class="break" />
-		<p>
-			Choice! Locke + (Celes, Sabin, Edgar, Setzer, Relm, Gau, Mog, Umaro, Terra, Cyan, Shadow, Strago, Gogo)<br />
-			Ancient Castle:
-		</p>
+		<h3>Ancient Castle</h3>
 		<script>renderTable("Master Pug");</script>
 		<hr class="battle" />
 		<script>renderTable("KatanaSoul");</script>
 		<hr class="battle" />
 		<script>renderTable("Blue Drgn");</script>
 		<hr class="break" />
-		<p>
-			Choice! Gau + (Celes, Sabin, Edgar, Setzer, Relm, Mog, Umaro, Terra, Locke, Cyan, Shadow, Strago, Gogo)<br />
-			Skies:
-		</p>
+		<div class="chars">
+			<script>
+				partyGroup("party", ["Gau"])
+				partyGroup("", ["Terra", "Locke", "Edgar", "Sabin", "Celes", "Shadow", "Cyan", "Setzer", "Mog", "Strago", "Relm", "Umaro", "Gogo"]);
+			</script>
+		</div>
+		<h3>Skies</h3>
 		<script>renderTable("Doom Gaze");</script>
 		<hr class="break" />
+		<div class="multi-party">
+			<div class="chars">
+				<div>A</div>
+				<script>
+					partyGroup("party", ["Gogo"]);
+				</script>
+			</div>
+			<div class="chars">
+				<div>B</div>
+				<script>
+					partyGroup("party", ["Locke", "Celes", "Strago"]);
+				</script>
+			</div>
+			<div class="chars">
+				<div>C</div>
+				<script>
+					partyGroup("party", ["space"]);
+				</script>
+			</div>
+			<div class="chars">
+				<div>&nbsp;</div>
+				<script>
+					partyGroup("", ["Terra", "Edgar", "Sabin", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Relm", "Umaro"]);
+				</script>
+			</div>
+		</div>
+		<h3>Kefka's Tower</h3>
+		<h5>Phase 1</h5>
 		<p>
-			Three Parties<br />
-			#1: Gogo<br />
-			#2: Locke, Strago, Celes<br />
-			#3:<br />
-			Kefka's Tower, Phase 1:<br />
-			Party 1: nada!<br />
-			Party 2:
+			Party A: nada!
 		</p>
-		<script>renderTable("Atma");</script>
+		<div class="battle-grp">
+			<p>
+				Party B:
+			</p>
+			<script>renderTable("Atma");</script>
+		</div>
 		<hr class="battle" />
 		<script>renderTable("Gold Drgn");</script>
 		<hr class="battle" />
 		<p>
-			Party 3:
+			Party C:
 		</p>
-		<script>renderTable("Striker");</script>
-		<hr class="enemy" />
-		<script>renderTable("Rough");</script>
-		<hr class="enemy" />
-		<script>renderTable("Inferno");</script>
+		<div class="battle-grp">
+			<script>renderTable("Striker");</script>
+			<hr class="enemy" />
+			<script>renderTable("Rough");</script>
+			<hr class="enemy" />
+			<script>renderTable("Inferno");</script>
+		</div>
 		<hr class="battle" />
 		<script>renderTable("Skull Drgn");</script>
 		<hr />
+		<h5>Phase 2:</h5>
 		<p>
-			Phase 2:<br />
-			Party 1: Take right path<br />
-			Party 2:
+			Party A: Take right path
 		</p>
-		<script>renderTable("Guardian");</script>
+		<div class="battle-grp">
+			<p>
+				Party B:
+			</p>
+			<script>renderTable("Guardian");</script>
+		</div>
 		<hr class="battle" />
 		<script>renderTable("Doom");</script>
-		<hr />
-		<p>
-			Party 3:
-		</p>
-		<script>renderTable("Poltrgeist");</script>
-		<hr />
-		<p>
-			Party 1:
-		</p>
-		<script>renderTable("Goddess");</script>
+		<hr class="battle" />
+		<div class="battle-grp">
+			<p>
+				Party C:
+			</p>
+			<script>renderTable("Poltrgeist");</script>
+		</div>
+		<hr class="battle" />
+		<div class="battle-grp">
+			<p>
+				Party A:
+			</p>
+			<script>renderTable("Goddess");</script>
+		</div>
 		<hr class="break" />
-		<h3>Final Battle:</h3>
-		<script>renderTable("Long Arm");</script>
-		<hr class="enemy" />
-		<script>renderTable("Short Arm");</script>
-		<hr class="enemy" />
-		<script>renderTable("Face");</script>
+		<h3>Final Battle</h3>
+		<div class="battle-grp">
+			<script>renderTable("Long Arm");</script>
+			<hr class="enemy" />
+			<script>renderTable("Short Arm");</script>
+			<hr class="enemy" />
+			<script>renderTable("Face");</script>
 		<hr class="battle" />
-		<script>renderTable("Tools");</script>
-		<hr class="enemy" />
-		<script>renderTable("Tiger");</script>
-		<hr class="enemy" />
-		<script>renderTable("Magic");</script>
-		<hr class="enemy" />
-		<script>renderTable("Hit");</script>
+		<div class="battle-grp">
+			<script>renderTable("Tools");</script>
+			<hr class="enemy" />
+			<script>renderTable("Tiger");</script>
+			<hr class="enemy" />
+			<script>renderTable("Magic");</script>
+			<hr class="enemy" />
+			<script>renderTable("Hit");</script>
+		</div>
 		<hr class="battle" />
-		<script>renderTable("Sleep");</script>
-		<hr class="enemy" />
-		<script>renderTable("Girl");</script>
+		<div class="battle-grp">
+			<script>renderTable("Sleep");</script>
+			<hr class="enemy" />
+			<script>renderTable("Girl");</script>
+		</div>
 		<hr class="battle" />
 		<script>renderTable("Kefka (Final)");</script>
 		
