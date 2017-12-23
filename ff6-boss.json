@@ -2400,9 +2400,7 @@ var bosses = {
 				"Water"
 			]
 		},
-		"notes" : [
-			"Keep everybody in the back row"
-		],
+		"notes" : [],
 		"wanted" : []
 	},
 	"Ultros (Opera)" : {

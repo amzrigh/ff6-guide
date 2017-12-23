@@ -8,7 +8,7 @@
 				font-size: 75% !important;
 			}
 			p, h3 {
-				margin: 6px 0px;
+				margin: 2px 0px;
 			}
 			.battle-grp {
 				page-break-inside: avoid;
@@ -17,6 +17,7 @@
 				width: 701px;
 				page-break-inside: avoid;
 				clear: both;
+				margin: 0px;
 			}
 			.boss th {
 				background-color: #ddd;
@@ -33,7 +34,7 @@
 			}
 			.colname {
 				width: 160px;
-				height: 80px;
+				height: 72px;
 			}
 			.colname table {
 				text-align: center;
@@ -78,6 +79,7 @@
 				margin-top: 0px;
 				margin-bottom: 0px;
 				height: inherit;
+				border-collapse: collapse;
 			}
 			.symbols td {
 				font-family: Segoe UI Symbol !important;
@@ -87,7 +89,6 @@
 				height: 20px;
 				max-height: 20px;
 				padding: 0px;
-				margin: 0px;
 			}
 			.symbols td span {
 				font-family: Segoe UI Image;
@@ -150,7 +151,7 @@
 			}
 			hr {
 				page-break-inside: avoid;
-				margin: 2px;
+				margin: 1px;
 			}
 			hr.break {
 				border: 4px double;
@@ -258,10 +259,10 @@
 					partyGroup("leftover", ["Cyan"])
 				</script>
 			</div>
-		<script>renderTable("Ultros (Opera)");</script>
+			<script>renderTable("Ultros (Opera)");</script>
 		</div>
 		<hr class="break" />
-		<p>
+		<div class="battle-grp">
 			<div class="chars">
 				<script>
 					partyGroup("locked", ["Locke", "Celes"]);
@@ -269,11 +270,11 @@
 					partyGroup("", ["Edgar", "Sabin", "Cyan"]);
 				</script>
 			</div>
-		</p>
-		<div class="battle-grp">
-			<script>renderTable("Shiva");</script>
-			<hr class="enemy" />
-			<script>renderTable("Ifrit");</script>
+			<div class="battle-grp">
+				<script>renderTable("Shiva");</script>
+				<hr class="enemy" />
+				<script>renderTable("Ifrit");</script>
+			</div>
 		</div>
 		<hr class="battle" />
 		<script>renderTable("Number 024");</script>
@@ -337,18 +338,20 @@
 		<hr class="battle" />
 		<script>renderTable("Ultros (Cave)");</script>
 		<hr class="break" />
+		<div class="chars">
+			<script>
+				partyGroup("party", ["Gau", "Strago"]);
+				partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Cyan", "Gau", "Setzer", "Mog", "Relm"]);
+			</script>
+		</div><br />
 		<p>
-			<div class="chars">
-				<script>
-					partyGroup("party", ["Gau", "Strago"]);
-					partyGroup("", ["Terra", "Edgar", "Sabin", "Cyan", "Gau", "Setzer", "Mog"]);
-				</script>
-			</div><br />
-			Lores &amp; Rages<br />
+			Lores &amp; Rages
+		</p>
+		<div class="battle-grp">
 			<div class="chars">
 				<script>
 					partyGroup("party", ["Locke", "Gau", "Strago"]);
-					partyGroup("leftover", ["Edgar", "Sabin", "Cyan", "Setzer", "Mog"]);
+					partyGroup("leftover", ["Terra", "Edgar", "Sabin", "Celes", "Cyan", "Setzer", "Mog", "Relm"]);
 				</script>
 				+
 				<script>
@@ -356,11 +359,11 @@
 				</script>
 				joins on Floating Continent
 			</div>
-		</p>
-		<div class="battle-grp">
-			<script>renderTable("Chupon");</script>
-			<hr class="enemy" />
-			<script>renderTable("Ultros (Sky)");</script>
+			<div class="battle-grp">
+				<script>renderTable("Chupon");</script>
+				<hr class="enemy" />
+				<script>renderTable("Ultros (Sky)");</script>
+			</div>
 		</div>
 		<hr class="battle" />
 		<div class="battle-grp">
@@ -447,30 +450,34 @@
 			<script>renderTable("Phunbaba (2)");</script>
 		</div>
 		<hr class="break" />
-		<div class="multi-party">
-			<div class="chars">
-				<div>A</div>
-				<script>
-					partyGroup("party", ["Sabin","Celes","Gau","Setzer"]);
-				</script>
+		<div class="battle-grp">
+			<div class="multi-party">
+				<div class="chars">
+					<div>A</div>
+					<script>
+						partyGroup("party", ["Sabin","Celes","Gau","Setzer"]);
+					</script>
+				</div>
+				<div class="chars">
+					<div>B</div>
+					<script>
+						partyGroup("party", ["Terra","Edgar","Strago","Relm"]);
+					</script>
+				</div>
 			</div>
-			<div class="chars">
-				<div>B</div>
-				<script>
-					partyGroup("party", ["Terra","Edgar","Strago","Relm"]);
-				</script>
-			</div>
+			<h3>Phoenix Cave</h3>
+			<script>renderTable("Red Dragon");</script>
 		</div>
-		<h3>Phoenix Cave</h3>
-		<script>renderTable("Red Dragon");</script>
 		<hr class="break" />
 		<div class="chars">
 			<script>
 				partyGroup("party", ["Locke", "Mog"]);
 				partyGroup("", ["Terra", "Edgar", "Sabin", "Celes", "Gau", "Setzer", "Strago", "Relm"]);
 			</script>
-		</div><br />
-		(Get in and recruit Mog first; add him to your party before engaging bosses)
+		</div>
+		<p>
+			(Get in and recruit Mog first; add him to your party before engaging bosses)
+		</p>
 		<h3>Narshe</h3>
 		<script>renderTable("Ice Dragon");</script>
 		<hr class="battle" />
@@ -593,25 +600,25 @@
 			<div class="chars">
 				<div>A</div>
 				<script>
-					partyGroup("party", ["Gogo"]);
+					partyGroup("party", ["Terra", "Sabin", "Mog", "Gogo"]);
 				</script>
 			</div>
 			<div class="chars">
 				<div>B</div>
 				<script>
-					partyGroup("party", ["Locke", "Celes", "Strago"]);
+					partyGroup("party", ["Locke", "Celes", "Shadow", "Strago"]);
 				</script>
 			</div>
 			<div class="chars">
 				<div>C</div>
 				<script>
-					partyGroup("party", ["space"]);
+					partyGroup("party", ["Edgar", "Cyan", "Gau", "Setzer"]);
 				</script>
 			</div>
 			<div class="chars">
 				<div>&nbsp;</div>
 				<script>
-					partyGroup("", ["Terra", "Edgar", "Sabin", "Shadow", "Cyan", "Gau", "Setzer", "Mog", "Relm", "Umaro"]);
+					partyGroup("leftover", ["Relm", "Umaro"])
 				</script>
 			</div>
 		</div>
