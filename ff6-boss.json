@@ -127,7 +127,7 @@ var bosses = {
 		"notes" : [
 			"Wear anti-Water gear (Imp equipment, Thunder Shield, Minerva, Snow Muffler)",
 			"Do not use Haste&mdash;will cast Rippler to steal from you",
-			"Gau's Aspik rage is very effective&mdash;absorbs water and deals lightning damage",
+			"Gau's Aspiran rage is very effective&mdash;absorbs water and deals lightning damage",
 			"&#x215b; chance of Metamorph success"
 		],
 		"wanted" : [
@@ -343,12 +343,12 @@ var bosses = {
 		},
 		"notes" : [
 			"Steal Sneak Ring",
-			"Rage Areneid/Primordite for Stop",
+			"Rage Alacran/Acrophies for Stop",
 			"Use Imp; Invis yourself"
 		],
 		"wanted" : [
 			"Locke",
-			"Gau (Araneid/Primordite)",
+			"Gau (Alacran/Acrophies)",
 			"Celes (Imp)"
 		]
 	},
@@ -449,10 +449,10 @@ var bosses = {
 			"Vanish + nonstandard kills will reset fight (X-Zone, Atom/True Edge, Cleave, Snare)",
 			"Protect against insta-death",
 			"Try to avoid L5 Doom vulnerability",
-			"Rage Io or Powerdemon"
+			"Rage Io or Cld Wraith"
 		],
 		"wanted" : [
-			"Gau (Io/Powerdemon)"
+			"Gau (Io/Cld Wraith)"
 		]
 	},
 	"Dullahan" : {
@@ -988,7 +988,7 @@ var bosses = {
 			]
 		},
 		"notes" : [
-			"Gau's Brawler Rage deals non-elemental magic damage"
+			"Gau's Zaghrem Rage deals non-elemental magic damage"
 		],
 		"wanted" : []
 	},
@@ -1099,7 +1099,7 @@ var bosses = {
 			"absorb" : []
 		},
 		"notes" : [
-			"Gau use Areneid/Primordite, Celes use Runic"
+			"Gau use Alacran/Acrophies, Celes use Runic"
 		],
 		"wanted" : [
 			"Gau",
@@ -2433,7 +2433,7 @@ var bosses = {
 		"notes" : [
 			"Equip Ramuh on someone other than Sabin, summon him first",
 			"Don't use Blitz or SwdTech",
-			"Rage Aspik or Primordite/Areneid"
+			"Rage Aspiran or Acrophies/Alacran"
 		],
 		"wanted" : []
 	},
