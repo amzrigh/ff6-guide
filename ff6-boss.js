@@ -1,18 +1,18 @@
 var symbols = {
 	"Fire" : "&#x1f525;",
-	"Ice" : "&#x2744;",
+	"Blizrd" : "&#x2744;",
 	"Lightning" : "&#x1f5f2;",
 	"Earth" : "&#x23da;",
 	"Wind" : "&#x1f300;",
 	"Water" : "&#x1f30a;",
-	"Pearl" : "&#x274d;",
+	"Holy" : "&#x274d;",
 	"Blind" : "&#x1f576;",
 	"Death" : "&#x26fc;",
 	"Stone" : "<span>&#x1f5ff;</span>",
 	"Imp" : "&#x1f422;",
 	"Poison" : "&#x1f571;",
 	"Sleep" : "&#x1f4a4;",
-	"Muddle" : "&#x1f4ab;",
+	"Confuse" : "&#x1f4ab;",
 	"Berserk" : "&#x1f479;",
 	"Mute" : "<span>&#x1f4ac;</span>",
 	"Stop" : "<div>&#xE283;</div>",
@@ -46,8 +46,8 @@ function drawImage(name) {
 	var imgTag = "";
 	if(name.indexOf("Ultros") != -1 && name != "Ultros (Lete)") {
 		imgTag = "<img src=\"images/Ultros.png\" />";
-	} else if(name.indexOf("Hidonite") != -1) {
-		imgTag = "<img src=\"images/Hidonite.png\" />";
+	} else if(name.indexOf("Erebus") != -1) {
+		imgTag = "<img src=\"images/Erebus.png\" />";
 	} else if(name.indexOf("Phunbaba") != -1) {
 		imgTag = "<img src=\"images/Phunbaba.png\" />";
 	} else {

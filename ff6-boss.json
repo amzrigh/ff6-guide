@@ -21,7 +21,7 @@ var bosses = {
 		},
 		"notes" : [
 			"Three parts: Air Force, Laser Gun, Missile Bay",
-			"Killing Laser Gun spawns Speck, which uses Runic",
+			"Killing Laser Gun spawns Bit, which uses Runic",
 			"Summon Zoneseek for Shell, Kirin to counter Sap",
 		],
 		"wanted" : [
@@ -29,7 +29,7 @@ var bosses = {
 			"Kirin"
 		]
 	},
-	"Atma" : {
+	"Ultima Bst" : {
 		"stats" : {
 			"hp" : 55000,
 			"mp" : 19000,
@@ -50,7 +50,7 @@ var bosses = {
 			"absorb" : [
 				"Poison",
 				"Wind",
-				"Pearl",
+				"Holy",
 				"Earth",
 				"Water"
 			]
@@ -67,7 +67,7 @@ var bosses = {
 			"Carbunkl"
 		]
 	},
-	"AtmaWeapon" : {
+	"Ultima Wpn" : {
 		"stats" : {
 			"hp" : 24000,
 			"mp" : 5000,
@@ -99,7 +99,7 @@ var bosses = {
 			"Zoneseek"
 		]
 	},
-	"Blue Drgn" : {
+	"BlueDragn" : {
 		"stats" : {
 			"hp" : 26900,
 			"mp" : 3800,
@@ -148,7 +148,7 @@ var bosses = {
 		"affin" : {
 			"weak" : [
 				"Fire",
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [
 				"Blind",
@@ -176,7 +176,7 @@ var bosses = {
 		"affin" : {
 			"weak" : [
 				"Fire",
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [
 				"Blind",
@@ -192,7 +192,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Chupon" : {
+	"Typhon" : {
 		"stats" : {
 			"hp" : 10000,
 			"mp" : 40000,
@@ -205,7 +205,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice",
+				"Blizrd",
 				"Water"
 			],
 			"vuln" : [
@@ -296,7 +296,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice",
+				"Blizrd",
 				"Water"
 			],
 			"vuln" : [
@@ -352,7 +352,7 @@ var bosses = {
 			"Celes (Imp)"
 		]
 	},
-	"Dirt Drgn" : {
+	"EarthDragn" : {
 		"stats" : {
 			"hp" : 28500,
 			"mp" : 16500,
@@ -386,7 +386,7 @@ var bosses = {
 			"Ragnarok maybe?"
 		]
 	},
-	"Doom" : {
+	"Fiend" : {
 		"stats" : {
 			"hp" : 63000,
 			"mp" : 4800,
@@ -399,7 +399,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [
 				"Blind",
@@ -407,22 +407,22 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice",
+				"Blizrd",
 				"Poison"
 			]
 		},
 		"notes" : [
 			"Gear against Ice",
 			"Set Slow early",
-			"Dispel after \"Doom's aura is shaking!\"",
+			"Dispel after \"Fiend's aura is shaking!\"",
 			"Use heavy non-elemental attacks",
-			"Try to get gil ending in 1 so L? Pearl will always hit"
+			"Try to get gil ending in 1 so L? Holy will always Power"
 		],
 		"wanted" : [
 			"Strago (learn ForceField)"
 		]
 	},
-	"Doom Gaze" : {
+	"Death Gaze" : {
 		"stats" : {
 			"hp" : 55555,
 			"mp" : 38000,
@@ -436,12 +436,12 @@ var bosses = {
 		"affin" : {
 			"weak" : [
 				"Fire",
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [],
 			"resist" : [],
 			"absorb" : [
-				"Ice",
+				"Blizrd",
 				"Poison"
 			]
 		},
@@ -477,7 +477,7 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [
@@ -485,7 +485,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Face" : {
+	"Visage" : {
 		"stats" : {
 			"hp" : 30000,
 			"mp" : 10000,
@@ -508,7 +508,7 @@ var bosses = {
 			"absorb" : []
 		},
 		"notes" : [
-			"Long Arm > Face > Short Arm"
+			"Long Arm > Visage > Short Arm"
 		],
 		"wanted" : []
 	},
@@ -525,7 +525,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice"
+				"Blizrd"
 			],
 			"vuln" : [
 				"Slow"
@@ -533,7 +533,7 @@ var bosses = {
 			"resist" : [
 				"Lightning",
 				"Poison",
-				"Pearl",
+				"Holy",
 				"Earth"
 			],
 			"absorb" : [
@@ -543,7 +543,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"GhostTrain" : {
+	"PhntmTrain" : {
 		"stats" : {
 			"hp" : 1900,
 			"mp" : 350,
@@ -558,7 +558,7 @@ var bosses = {
 			"weak" : [
 				"Fire",
 				"Lightning",
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [
 				"Undead"
@@ -607,7 +607,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Girl" : {
+	"Lady" : {
 		"stats" : {
 			"hp" : 9999,
 			"mp" : 10000,
@@ -624,18 +624,18 @@ var bosses = {
 			"resist" : [],
 			"absorb" : [
 				"Fire",
-				"Ice",
+				"Blizrd",
 				"Lightning",
 				"Poison",
 				"Wind",
-				"Pearl",
+				"Holy",
 				"Earth",
 				"Water"
 			]
 		},
 		"notes" : [
 			"Summon Golem or Fenrir at start of battle",
-			"Will revive Sleep",
+			"Will revive Rest",
 			"Focus down with non-elemental attacks",
 			"Steal Ragnarok"
 		],
@@ -665,7 +665,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Gold Drgn" : {
+	"GoldDragn" : {
 		"stats" : {
 			"hp" : 32400,
 			"mp" : 4000,
@@ -739,7 +739,7 @@ var bosses = {
 		"affin" : {
 			"weak" : [
 				"Fire",
-				"Pearl",
+				"Holy",
 				"Earth"
 			],
 			"vuln" : [
@@ -752,14 +752,14 @@ var bosses = {
 			]
 		},
 		"notes" : [
-			"Kill Hidonites first so Hidon will use GrandTrain",
+			"Kill Erebuss first so Hidon will use GrandDelta",
 			"Steal Thornlet"
 		],
 		"wanted" : [
 			"Strago"
 		]
 	},
-	"Hidonite (1)" : {
+	"Erebus (1)" : {
 		"stats" : {
 			"hp" : 3500,
 			"mp" : 1000,
@@ -791,7 +791,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"Hidonite (2)" : {
+	"Erebus (2)" : {
 		"stats" : {
 			"hp" : 3500,
 			"mp" : 1000,
@@ -813,18 +813,18 @@ var bosses = {
 			"resist" : [],
 			"absorb" : [
 				"Fire",
-				"Ice",
+				"Blizrd",
 				"Lightning",
 				"Poison",
 				"Wind",
-				"Pearl",
+				"Holy",
 				"Water"
 			]
 		},
 		"notes" : [],
 		"wanted" : []
 	},
-	"Hidonite (3)" : {
+	"Erebus (3)" : {
 		"stats" : {
 			"hp" : 3500,
 			"mp" : 1000,
@@ -838,11 +838,11 @@ var bosses = {
 		"affin" : {
 			"weak" : [
 				"Fire",
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [
 				"Undead",
-				"Muddle",
+				"Confuse",
 				"Slow",
 				"Stop"
 			],
@@ -854,7 +854,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"Hidonite (4)" : {
+	"Erebus (4)" : {
 		"stats" : {
 			"hp" : 3500,
 			"mp" : 100,
@@ -868,11 +868,11 @@ var bosses = {
 		"affin" : {
 			"weak" : [
 				"Fire",
-				"Ice",
+				"Blizrd",
 				"Lightning",
 				"Poison",
 				"Wind",
-				"Pearl",
+				"Holy",
 				"Earth",
 				"Water"
 			],
@@ -882,7 +882,7 @@ var bosses = {
 				"Death",
 				"Mute",
 				"Berserk",
-				"Muddle",
+				"Confuse",
 				"Sleep",
 				"Slow",
 				"Stop"
@@ -893,7 +893,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"Hit" : {
+	"Power" : {
 		"stats" : {
 			"hp" : 28000,
 			"mp" : 10000,
@@ -918,8 +918,8 @@ var bosses = {
 		},
 		"notes" : [
 			"Mute Magic",
-			"Slow Hit",
-			"Tools (insta-kills) > Tiger > Magic > Hit"
+			"Slow Power",
+			"Machine (insta-kills) > Tiger > Magic > Power"
 		],
 		"wanted" : []
 	},
@@ -969,7 +969,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice"
+				"Blizrd"
 			],
 			"vuln" : [
 				"Blind",
@@ -979,7 +979,7 @@ var bosses = {
 				"Lightning",
 				"Poison",
 				"Wind",
-				"Pearl",
+				"Holy",
 				"Earth",
 				"Water"
 			],
@@ -1067,13 +1067,13 @@ var bosses = {
 			"vuln" : [
 				"Blind",
 				"Poison",
-				"Muddle"
+				"Confuse"
 			],
 			"resist" : [],
 			"absorb" : []
 		},
 		"notes" : [
-			"Muddle, attack with magic",
+			"Confuse, attack with magic",
 			"Steal Strato, Murasame"
 		],
 		"wanted" : []
@@ -1149,12 +1149,12 @@ var bosses = {
 				"Blind",
 				"Death",
 				"Mute",
-				"Muddle",
+				"Confuse",
 				"Slow"
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice",
+				"Blizrd",
 				"Wind"
 			]
 		},
@@ -1208,7 +1208,7 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [],
@@ -1257,7 +1257,7 @@ var bosses = {
 				"Blind",
 				"Mute",
 				"Berserk",
-				"Muddle",
+				"Confuse",
 				"Sleep",
 				"Slow",
 				"Stop"
@@ -1312,12 +1312,12 @@ var bosses = {
 			"absorb" : []
 		},
 		"notes" : [
-			"Life 3 everyone, then sit and wait",
+			"RRaise everyone, then sit and wait",
 			"Steal Crystal Orb"
 		],
 		"wanted" : []
 	},
-	"Marshal" : {
+	"GuardLeadr" : {
 		"stats" : {
 			"hp" : 420,
 			"mp" : 150,
@@ -1340,7 +1340,7 @@ var bosses = {
 				"Death",
 				"Mute",
 				"Berserk",
-				"Muddle",
+				"Confuse",
 				"Sleep",
 				"Slow",
 				"Stop"
@@ -1353,7 +1353,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Master Pug" : {
+	"M.Tonberry" : {
 		"stats" : {
 			"hp" : 22000,
 			"mp" : 1200,
@@ -1377,12 +1377,12 @@ var bosses = {
 		},
 		"notes" : [
 			"Rotates elemental weakness, casts spells indicating alignment",
-			"Fire &#x21c6; Ice | Lightning &#x21c6; Wind | Poison &#x21c6; Pearl | Water &#x21c6; Earth",
+			"Fire &#x21c6; Ice | Lightning &#x21c6; Wind | Poison &#x21c6; Holy | Water &#x21c6; Earth",
 			"Sleep & Slow"
 		],
 		"wanted" : []
 	},
-	"MissileBay" : {
+	"Missile Bay" : {
 		"stats" : {
 			"hp" : 3000,
 			"mp" : 7000,
@@ -1436,7 +1436,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"Nerapa" : {
+	"Nelapa" : {
 		"stats" : {
 			"hp" : 2800,
 			"mp" : 280,
@@ -1449,14 +1449,14 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice",
+				"Blizrd",
 				"Lightning",
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [
 				"Death",
 				"Berserk",
-				"Muddle",
+				"Confuse",
 				"Stop"
 			],
 			"resist" : [
@@ -1520,7 +1520,7 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [
@@ -1587,7 +1587,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Poltrgeist" : {
+	"Demon" : {
 		"stats" : {
 			"hp" : 58000,
 			"mp" : 18900,
@@ -1619,7 +1619,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Presenter" : {
+	"AnglrWhelk" : {
 		"stats" : {
 			"hp" : 9845,
 			"mp" : 1600,
@@ -1647,7 +1647,7 @@ var bosses = {
 				"Poison"
 			],
 			"absorb" : [
-				"Ice",
+				"Blizrd",
 				"Lightning",
 				"Water"
 			]
@@ -1659,7 +1659,7 @@ var bosses = {
 			"Shoat"
 		]
 	},
-	"Pugs" : {
+	"Tonberries" : {
 		"stats" : {
 			"hp" : 14001,
 			"mp" : 11000,
@@ -1705,13 +1705,13 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice",
+				"Blizrd",
 				"Water"
 			],
 			"vuln" : [
 				"Blind",
 				"Poison",
-				"Muddle",
+				"Confuse",
 				"Slow"
 			],
 			"resist" : [],
@@ -1725,7 +1725,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Rider" : {
+	"Hell Rider" : {
 		"stats" : {
 			"hp" : 1300,
 			"mp" : 170,
@@ -1779,13 +1779,13 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [],
 		"wanted" : []
 	},
-	"Rizopas" : {
+	"Rhizopas" : {
 		"stats" : {
 			"hp" : 775,
 			"mp" : 39,
@@ -1803,7 +1803,7 @@ var bosses = {
 			"vuln" : [
 				"Blind",
 				"Berserk",
-				"Muddle",
+				"Confuse",
 				"Sleep",
 				"Slow",
 				"Stop"
@@ -1829,7 +1829,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice"
+				"Blizrd"
 			],
 			"vuln" : [
 				"Stone",
@@ -1870,12 +1870,12 @@ var bosses = {
 				"Lightning",
 				"Poison",
 				"Wind",
-				"Pearl",
+				"Holy",
 				"Earth",
 				"Water"
 			],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [],
@@ -1907,7 +1907,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"Skull Drgn" : {
+	"SkullDragon" : {
 		"stats" : {
 			"hp" : 32800,
 			"mp" : 1999,
@@ -1921,7 +1921,7 @@ var bosses = {
 		"affin" : {
 			"weak" : [
 				"Fire",
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [],
 			"resist" : [],
@@ -1934,7 +1934,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Sleep" : {
+	"Rest" : {
 		"stats" : {
 			"hp" : 40000,
 			"mp" : 10000,
@@ -1969,26 +1969,26 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice"
+				"Blizrd"
 			],
 			"vuln" : [
 				"Blind",
 				"Stone",
 				"Death",
 				"Berserk",
-				"Muddle",
+				"Confuse",
 				"Slow",
 			],
 			"resist" : [],
 			"absorb" : [
 				"Fire",
-				"Pearl"
+				"Holy"
 			]
 		},
 		"notes" : [],
 		"wanted" : []
 	},
-	"Speck" : {
+	"Bit" : {
 		"stats" : {
 			"hp" : 420,
 			"mp" : 285,
@@ -2041,7 +2041,7 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [
@@ -2064,7 +2064,7 @@ var bosses = {
 		"affin" : {
 			"weak" : [
 				"Fire",
-				"Pearl"
+				"Holy"
 			],
 			"vuln" : [
 				"Undead",
@@ -2081,7 +2081,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Storm Drgn" : {
+	"StormDragn" : {
 		"stats" : {
 			"hp" : 42000,
 			"mp" : 1250,
@@ -2134,7 +2134,7 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [],
@@ -2183,7 +2183,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice",
+				"Blizrd",
 				"Water"
 			],
 			"vuln" : [
@@ -2255,7 +2255,7 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice",
+				"Blizrd",
 				"Water"
 			]
 		},
@@ -2275,7 +2275,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice"
+				"Blizrd"
 			],
 			"vuln" : [
 				"Poison"
@@ -2288,7 +2288,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"Tools" : {
+	"Machine" : {
 		"stats" : {
 			"hp" : 24000,
 			"mp" : 10000,
@@ -2314,7 +2314,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"Tritoch" : {
+	"Valigrmanda" : {
 		"stats" : {
 			"hp" : 30000,
 			"mp" : 50000,
@@ -2336,12 +2336,12 @@ var bosses = {
 				"Lightning",
 				"Poison",
 				"Wind",
-				"Pearl",
+				"Holy",
 				"Earth",
 				"Water"
 			],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [
@@ -2464,7 +2464,7 @@ var bosses = {
 			]
 		},
 		"notes" : [
-			"Gaia Gear to resist Aqua Rake and Magnitude8",
+			"Gaia Gear to resist Aquabreath and Magnitude8",
 			"Phase 2 at 15360 HP&mdash;Haste, Safe, magic counter"
 		],
 		"wanted" : []
@@ -2496,11 +2496,11 @@ var bosses = {
 			]
 		},
 		"notes" : [
-			"Phantom to negate physical attacks, Mute Chupon"
+			"Phantom to negate physical attacks, Mute Typhon"
 		],
 		"wanted" : []
 	},
-	"Umaro" : {
+	"Yeti" : {
 		"stats" : {
 			"hp" : 17200,
 			"mp" : 6990,
@@ -2525,7 +2525,7 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Ice"
+				"Blizrd"
 			]
 		},
 		"notes" : [
@@ -2564,7 +2564,7 @@ var bosses = {
 		],
 		"wanted" : []
 	},
-	"Whelk" : {
+	"Ymir" : {
 		"stats" : {
 			"hp" : 1600,
 			"mp" : 1000,
@@ -2587,7 +2587,7 @@ var bosses = {
 		"notes" : [],
 		"wanted" : []
 	},
-	"White Drgn" : {
+	"HolyDragon" : {
 		"stats" : {
 			"hp" : 18500,
 			"mp" : 12000,
@@ -2608,12 +2608,12 @@ var bosses = {
 			],
 			"resist" : [],
 			"absorb" : [
-				"Pearl"
+				"Holy"
 			]
 		},
 		"notes" : [
 			"Uses only magic attacks; cast Mute",
-			"Steal Pearl Lance",
+			"Steal Holy Lance",
 			"&#x215b; chance of Metamorph success"
 		],
 		"wanted" : []
@@ -2631,7 +2631,7 @@ var bosses = {
 		},
 		"affin" : {
 			"weak" : [
-				"Ice"
+				"Blizrd"
 			],
 			"vuln" : [
 				"Blind"
@@ -2639,17 +2639,17 @@ var bosses = {
 			"resist" : [],
 			"absorb" : [
 				"Fire",
-				"Pearl"
+				"Holy"
 			]
 		},
 		"notes" : [
 			"Equip Minerva, Thunder Shields",
-			"If Strago gets possessed, use Exploder; anybody else, use Break",
+			"If Strago gets possessed, use SelfDstrct; anybody else, use Break",
 			"Use Ice or barrier-piercing attacks",
 			"Steal Memento Ring"
 		],
 		"wanted" : [
-			"Strago (Exploder)"
+			"Strago (SelfDstrct)"
 		]
 	}
 };
