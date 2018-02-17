@@ -43,18 +43,14 @@ function renderTable(monster) {
 }
 
 function drawImage(name) {
-	var imgTag = "";
-	if(name.indexOf("Ultros") != -1 && name != "Ultros (Lete)") {
-		imgTag = "<img src=\"images/Ultros.png\" />";
-	} else if(name.indexOf("Erebus") != -1) {
-		imgTag = "<img src=\"images/Erebus.png\" />";
-	} else if(name.indexOf("Phunbaba") != -1) {
-		imgTag = "<img src=\"images/Phunbaba.png\" />";
-	} else {
-		imgTag = "<img src=\"images/" + name + ".png\" />";
+	if(name.startsWith("Ultros") && name != "Ultros (Lete)") {
+		name = "Ultros";
+	} else if(name.startsWith("Erebus")) {
+		name = "Erebus";
+	} else if(name.startsWith("Phunbaba")) {
+		name = "Phunbaba";
 	}
-	
-	return imgTag;
+	return `<img src=\"images/${name}.png\" />`;
 }
 
 function writeAllStats(stats) {
