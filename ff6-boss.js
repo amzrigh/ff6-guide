@@ -63,8 +63,8 @@ function writeAllStats(stats) {
 }
 
 function writeStat(stats, stat) {
-	return "<th>" + stat + "</th>" +
-		"<td>" + stats[stat.toLowerCase()] + "</td>";
+	return `<th>${stat}</th>` +
+		`<td>${stats[stat.toLowerCase()]}</td>`;
 }
 
 function writeAffinity(affin) {
@@ -72,23 +72,23 @@ function writeAffinity(affin) {
 			"<tr><td>" +
 				"<table class=\"affin-grp\">" +
 					"<tr><th>Vuln</th></tr>" +
-					"<tr><td>" + writeAffinityGroup(affin.vuln) + "</td></tr>" +
+					`<tr><td>${writeAffinityGroup(affin.vuln)}</td></tr>` +
 				"</table>" +
 			"</td><td>" +
 				"<table class=\"affin-grp\">" +
 					"<tr><th>Weak</th></tr>" +
-					"<tr><td>" + writeAffinityGroup(affin.weak) + "</td></tr>" +
+					`<tr><td>${writeAffinityGroup(affin.weak)}</td></tr>` +
 				"</table>" +
 			"</td></tr>" +
 			"<tr><td>" +
 				"<table class=\"affin-grp\">" +
 					"<tr><th>Null</th></tr>" +
-					"<tr><td>" + writeAffinityGroup(affin.resist) + "</td></tr>" +
+					`<tr><td>${writeAffinityGroup(affin.resist)}</td></tr>` +
 				"</table>" +
 			"</td><td>" +
 				"<table class=\"affin-grp\">" +
 					"<tr><th>Absorb</th></tr>" +
-					"<tr><td>" + writeAffinityGroup(affin.absorb) + "</td></tr>" +
+					`<tr><td>${writeAffinityGroup(affin.absorb)}</td></tr>` +
 				"</table>" +
 			"</td></tr>" +
 		"</table>";
@@ -105,20 +105,19 @@ function writeAffinityGroup(ag) {
 				}
 				tableContent += "<tr>";
 			}
-			tableContent += "<td>" + symbols[ag[i]] + "</td>";
+			tableContent += `<td>${symbols[ag[i]]}</td>`;
 		}
 		tableContent += "</tr></table>";
 	}
 	return tableContent;
 }
 
-
 function writeNotes(notes) {
 	var notesContent = "";
 	if(notes.length > 0) {
 		notesContent += "<ul>";
 		for(var i = 0; i < notes.length; i++) {
-			notesContent += "<li>" + notes[i] + "</li>";
+			notesContent += `<li>${notes[i]}</li>`;
 		}
 		notesContent += "</ul>";
 	}
@@ -126,7 +125,7 @@ function writeNotes(notes) {
 }
 
 function partyGroup(grp, party) {
-	span = "<span class=\"" + grp + "\">";
+	span = `<span class=\"${grp}\">`;
 	for(i = 0; i < party.length; i++) {
 		span += drawChar(party[i]);
 	}
