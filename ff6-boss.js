@@ -55,10 +55,10 @@ function drawImage(name) {
 
 function writeAllStats(stats) {
 	return "<table>" +
-			"<tr>" + writeStat(stats, "HP") + writeStat(stats, "MP") + "</tr>" +
-			"<tr>" + writeStat(stats, "Atk") + writeStat(stats, "MAtk") + "</tr>" +
-			"<tr>" + writeStat(stats, "Def") + writeStat(stats, "MDef") + "</tr>" +
-			"<tr>" + writeStat(stats, "Eva") + writeStat(stats, "MEva") + "</tr>" +
+			`<tr>${writeStat(stats, "HP")} ${writeStat(stats, "MP")}</tr>` +
+			`<tr>${writeStat(stats, "Atk")} ${writeStat(stats, "MAtk")}</tr>` +
+			`<tr>${writeStat(stats, "Def")} ${writeStat(stats, "MDef")}</tr>` +
+			`<tr>${writeStat(stats, "Eva")} ${writeStat(stats, "MEva")}</tr>` +
 		"</table>";
 }
 
