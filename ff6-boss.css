@@ -1,0 +1,167 @@
+* {
+	font-size: inherit;
+}
+body {
+	font-size: 75%;
+}
+p, h3, h5 {
+	margin: 2px 0px;
+}
+.battle-grp {
+	page-break-inside: avoid;
+}
+.boss {
+	width: 701px;
+	page-break-inside: avoid;
+	clear: both;
+	margin: 0px;
+}
+.boss th {
+	background-color: #ddd;
+	padding: 0px 4px;
+	height: 16px;
+	vertical-align: middle;
+}
+.boss td {
+	vertical-align: top;
+	padding: 0px;
+}
+.boss table {
+	width: 100%;
+}
+.colname {
+	width: 160px;
+	height: 72px;
+}
+.colname table {
+	text-align: center;
+	border-spacing: 0px 1px;
+	height: 100%;
+}
+.colname td {
+	vertical-align: middle;
+}
+.colstats table {
+	border-spacing: 1px;
+}
+.colstats table th {
+	text-align: right;
+	width: 50px;
+}
+.colstats table td {
+	width: 46px;
+	padding-left: 2px;
+	vertical-align: middle;
+}
+.colaffin {
+	width: 316px;
+}
+.colaffin > table {
+	border-spacing: 0px;
+}
+.colaffin > table > tbody > tr > td {
+	width: 50%;
+	padding-left: 2px;
+}
+.affin-grp {
+	border-spacing: 0px;
+}
+.affin-grp td {
+	text-align: center;
+	height: 20px;
+}
+table.symbols {
+	width: initial;
+	margin: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: inherit;
+	border-collapse: collapse;
+}
+.symbols td {
+	font-family: Segoe UI Symbol;
+	vertical-align: middle;
+	width: 20px;
+	max-width: 20px;
+	height: 20px;
+	max-height: 20px;
+	padding: 0px;
+}
+.symbols td span {
+	font-family: Segoe UI Image;
+}
+.symbols td div {
+	position: relative;
+	top: -2px;
+}
+.notes {
+	text-align: left;
+}
+ul {
+	margin: 3px;
+}
+.boss ul {
+	list-style-type: none;
+	padding-left: 30px;
+	text-indent: -15px;
+	margin: 0px;
+}
+.chars {
+	page-break-inside: avoid;
+	display: inline-block;
+	height: 28px;
+	padding: 0px;
+	vertical-align: middle;
+	margin: 2px;
+}
+.chars img {
+	padding: 2px 4px;
+}
+.chars span {
+	display: inline-block;
+	height: 100%;
+	vertical-align: inherit;
+}
+.chars div {
+	margin: 0px;
+	font-size: 10px;
+	text-align: center;
+}
+.party {
+	border-style: solid;
+	border-width: 1px 0px;
+}
+.locked {
+	background-color: #999;
+	border-style: solid;
+	border-width: 1px 0px;
+}
+.leftover img {
+	opacity: 0.5;
+}
+.party-spacer {
+	width: 30px;
+}
+.multi-party {
+	position: relative;
+	margin-bottom: 12px;
+}
+hr {
+	page-break-inside: avoid;
+	margin: 1px;
+}
+hr.break {
+	border: 4px double;
+	height: 0px;
+}
+hr.battle {
+	border: 1px;
+	border-style: solid none;
+	height: 1px;
+}
+hr.enemy {
+	border-style: hidden;
+	border-bottom: 1px dashed #ccc;
+	background: #999;
+	height: 0px;
+}
